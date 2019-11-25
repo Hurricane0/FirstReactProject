@@ -1,20 +1,21 @@
 import React from "react";
-import "./Navigation.css";
+import s from "./Navigation.module.css"; //Созданние класса для использования компонентного CSS
+
 function Navigation() {
   return (
-    <nav className="nav">
+    <nav className={s.nav}>
       <ul>
         <a href="#f">
-          <li>Main</li>
+          <li className={s.item}>Main</li>
         </a>
         <a href="#f">
-          <li>Portfolio</li>
+          <li className={s.item}>Portfolio</li>
         </a>
         <a href="#f">
-          <li>About</li>
+          <li className={s.item}>About</li>
         </a>
         <a href="#f">
-          <li>More</li>
+          <li className={s.item}>More</li>
         </a>
       </ul>
     </nav>
