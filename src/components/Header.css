@@ -1,0 +1,7 @@
+.header {
+  grid-area: h;
+  background-color: rgb(143, 122, 122);
+}
+.header img {
+  cursor: pointer;
+}
