@@ -1,7 +1,34 @@
 .header {
-  grid-area: h;
-  background-color: rgb(143, 122, 122);
+  background-color: rgba(232, 234, 241, 0.76);
+  border-bottom: 1px solid rgba(145, 144, 144, 0.452);
+  position: fixed;
+  width: 100%;
+  min-height: 57px;
 }
-.header img {
-  cursor: pointer;
+
+.header nav {
+  width: 40%;
+  margin: 12px auto;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav li {
+  padding: 5px 40px;
+  font-size: 20px;
+  color: rgba(49, 48, 48, 0.74);
+  transition: 0.2s;
+  border-right: 1px solid rgba(49, 48, 48, 0.151);
+  border-left: 1px solid rgba(49, 48, 48, 0.151);
+}
+nav li:hover {
+  color: #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+nav a {
+  text-decoration: none;
 }

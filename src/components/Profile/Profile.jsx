@@ -4,19 +4,12 @@ import Post from "./AllPosts/Post/Post";
 function Profile() {
   return (
     <div className={s.content}>
-      <img
-        src="https://cdn-media-1.freecodecamp.org/images/0*ngXgBNNdx6iiWP8q.png"
-        alt="contentImage"
-      />
       <div>Image + Description</div>
       <div>
         My Posts
         <div>New posts</div>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <Post message="Hello its first message!)" />
+        <Post message="Good evening! What`s up, Guys?" />
       </div>
     </div>
   );

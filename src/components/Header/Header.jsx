@@ -3,11 +3,22 @@ import s from "./Header.module.css"; //Созданние класса для и
 function Header() {
   return (
     <header className={s.header}>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Code.svg/1200px-Code.svg.png"
-        alt="logo"
-        height="55px"
-      />
+      <nav>
+        <ul>
+          <a href="#f">
+            <li>Home</li>
+          </a>
+          <a href="#f">
+            <li>Posts</li>
+          </a>
+          <a href="#f">
+            <li>Settings</li>
+          </a>
+          <a href="#f">
+            <li>About</li>
+          </a>
+        </ul>
+      </nav>
     </header>
   );
 }
