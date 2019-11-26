@@ -1,0 +1,17 @@
+.post img {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border-radius: 60px;
+}
+.post {
+  color: blue;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  margin-bottom: 9px;
+}
+.post span {
+  padding-left: 10px;
+  font-size: 16px;
+}
