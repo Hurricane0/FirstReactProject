@@ -1,22 +1,23 @@
 import React from "react";
 import s from "./Header.module.css"; //Созданние класса для использования компонентного CSS
+import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <header className={s.header}>
       <nav>
         <ul>
-          <a href="#f">
-            <li>Home</li>
-          </a>
-          <a href="#f">
-            <li>Posts</li>
-          </a>
-          <a href="#f">
+          <NavLink to="/profile">
+            <li>Profile</li>
+          </NavLink>
+          <NavLink to="/messages">
+            <li>Messages</li>
+          </NavLink>
+          <NavLink to="/settings">
             <li>Settings</li>
-          </a>
-          <a href="#f">
+          </NavLink>
+          <NavLink to="/about">
             <li>About</li>
-          </a>
+          </NavLink>
         </ul>
       </nav>
     </header>

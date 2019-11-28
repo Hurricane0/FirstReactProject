@@ -2,16 +2,22 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
-// import Profile from "./components/Profile";
+import Dialogs from "./components/Dialogs/Dialogs";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <div className="wrapper">
-        <Profile />
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+        <div className="wrapper">
+          <div className="main-content-wrapper">
+            <Route path="/profile" component={Profile} />
+            <Route path="/messages" component={Dialogs} />
+          </div>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

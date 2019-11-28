@@ -1,0 +1,19 @@
+.dialogsWrapper {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  grid-template-areas: "list messages";
+}
+.dialogsList {
+  min-height: 600px;
+  grid-area: list;
+  border-right: 1px solid rgba(145, 144, 144, 0.452);
+  padding-top: 6px;
+}
+.dialogsContent {
+  min-height: 600px;
+  grid-area: messages;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  color: rgba(75, 72, 72, 0.548);
+}

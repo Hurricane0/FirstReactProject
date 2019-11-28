@@ -1,0 +1,14 @@
+.userDialogWrapper {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  border-bottom: 1px solid rgba(145, 144, 144, 0.452);
+  transition: 0.2s;
+}
+.userDialogWrapper:hover {
+  background-color: rgba(201, 201, 201, 0.452);
+}
+/* .userDialogWrapper:active {
+  background-color: rgba(201, 201, 201, 0.185);
+} */

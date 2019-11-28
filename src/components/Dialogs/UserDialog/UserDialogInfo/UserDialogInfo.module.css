@@ -1,0 +1,21 @@
+* {
+  text-decoration: none;
+}
+.userDialogInfoWrapper {
+  margin-left: 10px;
+  width: 100%;
+  padding-top: 10px;
+  color: black;
+}
+p {
+  font-size: 12px;
+  /* display: inline-block; */
+}
+span {
+  font-size: 12px;
+  position: relative;
+  float: right;
+  top: -34px;
+  right: 5px;
+  color: rgba(44, 43, 43, 0.616);
+}
