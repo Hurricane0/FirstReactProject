@@ -3,16 +3,16 @@ import s from "./Dialogs.module.css";
 import Chat from "./Chat/Chat";
 import DialogsList from "./DialogsList/DialogsList";
 
-function Dialogs() {
+function Dialogs(props) {
   return (
     <div className={s.dialogsWrapper}>
       {/* Dialogs List */}
       <div className={s.dialogsList}>
-        <DialogsList />
+        <DialogsList user_dialogs={props.user_dialogs} />
       </div>
       {/* Dialogs Content */}
       <div className={s.dialogsContent}>
-        <Chat />
+        <Chat user_messages={props.user_messages} />
       </div>
     </div>
   );
