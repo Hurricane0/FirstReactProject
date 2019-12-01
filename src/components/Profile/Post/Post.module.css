@@ -5,7 +5,7 @@
   border-radius: 60px;
 }
 .post {
-  color: blue;
+  color: rgba(44, 43, 43, 0.616);
   display: flex;
   align-items: center;
   padding-left: 7px;

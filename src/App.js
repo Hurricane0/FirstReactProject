@@ -12,7 +12,7 @@ function App() {
         <Header />
         <div className="wrapper">
           <div className="main-content-wrapper">
-            <Route path="/profile" component={Profile} />
+            <Route path="/profile" render={() => <Profile username="" />} />
             <Route path="/messages" component={Dialogs} />
           </div>
         </div>

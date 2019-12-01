@@ -1,16 +1,19 @@
 import React from "react";
 import s from "./Dialogs.module.css";
-import UserDialog from "./UserDialog/UserDialog";
+import Chat from "./Chat/Chat";
+import DialogsList from "./DialogsList/DialogsList";
 
 function Dialogs() {
   return (
     <div className={s.dialogsWrapper}>
+      {/* Dialogs List */}
       <div className={s.dialogsList}>
-        <UserDialog />
-        <UserDialog />
-        <UserDialog />
+        <DialogsList />
       </div>
-      <div className={s.dialogsContent}>Chat with your friend</div>
+      {/* Dialogs Content */}
+      <div className={s.dialogsContent}>
+        <Chat />
+      </div>
     </div>
   );
 }

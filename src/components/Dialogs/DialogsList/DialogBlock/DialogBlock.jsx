@@ -1,18 +1,18 @@
 import React from "react";
-import s from "./UserDialog.module.css";
+import s from "./DialogBlock.module.css";
 import UserAvatar from "./UserAvatar/UserAvatar";
 import UserDialogInfo from "./UserDialogInfo/UserDialogInfo";
 import { NavLink } from "react-router-dom";
 
-function UserDialog() {
+function DialogBlock(props) {
   return (
-    <NavLink to="/messages/user-chat">
+    <NavLink to={`/messages/${props.id}`}>
       <div className={s.userDialogWrapper}>
         <UserAvatar />
-        <UserDialogInfo />
+        <UserDialogInfo username={props.username} />
       </div>
     </NavLink>
   );
 }
 
-export default UserDialog;
+export default DialogBlock;

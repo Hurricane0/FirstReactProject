@@ -6,16 +6,16 @@ function Header() {
     <header className={s.header}>
       <nav>
         <ul>
-          <NavLink to="/profile">
+          <NavLink activeClassName={s.activeLink} to="/profile">
             <li>Profile</li>
           </NavLink>
-          <NavLink to="/messages">
+          <NavLink activeClassName={s.activeLink} to="/messages">
             <li>Messages</li>
           </NavLink>
-          <NavLink to="/settings">
+          <NavLink activeClassName={s.activeLink} to="/settings">
             <li>Settings</li>
           </NavLink>
-          <NavLink to="/about">
+          <NavLink activeClassName={s.activeLink} to="/about">
             <li>About</li>
           </NavLink>
         </ul>

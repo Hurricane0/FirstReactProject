@@ -7,15 +7,15 @@
   padding-top: 10px;
   color: black;
 }
-p {
+.userDialogInfoWrapper p {
   font-size: 12px;
   /* display: inline-block; */
 }
-span {
+.userDialogInfoWrapper span {
   font-size: 12px;
   position: relative;
   float: right;
-  top: -34px;
+  top: -38px;
   right: 5px;
   color: rgba(44, 43, 43, 0.616);
 }
