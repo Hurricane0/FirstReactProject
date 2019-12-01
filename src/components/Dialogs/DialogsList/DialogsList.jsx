@@ -3,10 +3,10 @@ import React from "react";
 import DialogBlock from "./DialogBlock/DialogBlock";
 
 function DialogsList(props) {
-  let dialog_block = props.user_dialogs.map(d => (
+  let dialogBlock = props.state.userDialogs.map(d => (
     <DialogBlock username={d.name} id={d.id} />
   ));
-  return <div>{dialog_block}</div>;
+  return <div>{dialogBlock}</div>;
 }
 
 export default DialogsList;
