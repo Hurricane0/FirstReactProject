@@ -10,8 +10,12 @@
   align-items: center;
   padding-left: 7px;
   margin-bottom: 9px;
+  max-width: 100%;
 }
-.post span {
-  padding-left: 10px;
-  font-size: 16px;
+
+.post p {
+  max-width: 100%;
+  padding-right: 5px;
+  font-size: 15px;
+  line-height: 133%;
 }

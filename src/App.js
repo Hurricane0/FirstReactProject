@@ -12,7 +12,15 @@ function App(props) {
         <Header />
         <div className="wrapper">
           <div className="main-content-wrapper">
-            <Route path="/profile" render={() => <Profile />} />
+            <Route
+              path="/profile"
+              render={() => (
+                <Profile
+                  state={props.state.profilePage}
+                  addPost={props.addPost}
+                />
+              )}
+            />
             <Route
               path="/messages"
               render={() => <Dialogs state={props.state.dialogsPage} />}

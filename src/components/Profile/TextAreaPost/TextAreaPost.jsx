@@ -1,24 +1,25 @@
 import React from "react";
 import s from "./TextAreaPost.module.css";
 
-function TextAreaPost() {
+function TextAreaPost(props) {
   let textareaRef = React.createRef();
   let addPost = () => {
     let postText = textareaRef.current.value;
-    alert(postText);
+    props.addPost(postText);
+    textareaRef.current.value = ""; //
   };
+
   return (
     <div className={s.wrapper}>
       <hr />
-      <div class={s.textareaWrapper}>
+      <div className={s.textareaWrapper}>
         <textarea
           name="textAreaPost"
           id="textAreaPost"
-          maxlength="300"
+          maxLength="600"
           placeholder="Post something..."
-          autofocus
           ref={textareaRef}
-        ></textarea>
+        />
       </div>
       <div className={s.postButtonDiv}>
         <button onClick={addPost}>Post</button>
@@ -28,3 +29,9 @@ function TextAreaPost() {
 }
 
 export default TextAreaPost;
+
+// let textareaRef = React.createRef();
+// let addPost = () => {
+//   let postText = textareaRef.current.value;
+//   alert(postText);
+// };
