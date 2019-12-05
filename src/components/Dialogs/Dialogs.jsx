@@ -8,11 +8,11 @@ function Dialogs(props) {
     <div className={s.dialogsWrapper}>
       {/* Dialogs List */}
       <div className={s.dialogsList}>
-        <DialogsList state={props.state} />
+        <DialogsList dialogsPage={props.dialogsPage} />
       </div>
       {/* Dialogs Content */}
       <div className={s.dialogsContent}>
-        <Chat state={props.state} />
+        <Chat dialogsPage={props.dialogsPage} />
       </div>
     </div>
   );

@@ -16,14 +16,20 @@ function App(props) {
               path="/profile"
               render={() => (
                 <Profile
-                  state={props.state.profilePage}
+                  profilePage={props.state.profilePage}
                   addPost={props.addPost}
+                  updateNewTextareaText={props.updateNewTextareaText}
                 />
               )}
             />
             <Route
               path="/messages"
-              render={() => <Dialogs state={props.state.dialogsPage} />}
+              render={() => (
+                <Dialogs
+                  dialogsPage={props.state.dialogsPage}
+                  
+                />
+              )}
             />
           </div>
         </div>

@@ -19,15 +19,21 @@ let state = {
       { id: 1, postText: "It is the first post" },
       { id: 2, postText: "There is the second post" },
       { id: 3, postText: "The third post!" }
-    ]
+    ],
+    textareaText: ""
   }
 };
-export let addPost = message => {
+export let addPost = () => {
   let newPost = {
     id: 4,
-    postText: message
+    postText: state.profilePage.textareaText
   };
   state.profilePage.posts.push(newPost);
+  state.profilePage.textareaText = "";
+  rerenderEntireTree(state);
+};
+export let updateNewTextareaText = newtext => {
+  state.profilePage.textareaText = newtext;
   rerenderEntireTree(state);
 };
 export default state;

@@ -2,8 +2,7 @@ import React from "react";
 import s from "./Chat.module.css";
 
 function Chat(props) {
-  debugger;
-  let chat = props.state.userMessages.map(user => (
+  let chat = props.dialogsPage.userMessages.map(user => (
     <div className={s.dialogsContent}>{user.message}</div>
   ));
 
