@@ -1,5 +1,3 @@
-import { rerenderEntireTree } from "../render";
-
 let state = {
   dialogsPage: {
     userDialogs: [
@@ -23,6 +21,7 @@ let state = {
     textareaText: ""
   }
 };
+//Adding new post
 export let addPost = () => {
   let newPost = {
     id: 4,
@@ -32,8 +31,17 @@ export let addPost = () => {
   state.profilePage.textareaText = "";
   rerenderEntireTree(state);
 };
+//Synchronous input text update
 export let updateNewTextareaText = newtext => {
   state.profilePage.textareaText = newtext;
   rerenderEntireTree(state);
+};
+//Default stab (Заглушка)
+let rerenderEntireTree = () => {
+  console.log("State has been changed");
+};
+//Pattern (Observer) for rerenderinng with no mistakes in cyclic dependence
+export const subscribe = observer => {
+  rerenderEntireTree = observer; //Changing rerenderEntireTree() function
 };
 export default state;

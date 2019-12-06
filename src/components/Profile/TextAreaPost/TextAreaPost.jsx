@@ -9,7 +9,6 @@ function TextAreaPost(props) {
   let textareaInputFunc = () => {
     let inputText = textareaRef.current.value;
     props.updateNewTextareaText(inputText);
-    console.log(inputText);
   };
 
   return (
