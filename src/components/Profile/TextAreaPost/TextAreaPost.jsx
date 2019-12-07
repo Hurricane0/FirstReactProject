@@ -33,9 +33,3 @@ function TextAreaPost(props) {
 }
 
 export default TextAreaPost;
-
-// let textareaRef = React.createRef();
-// let addPost = () => {
-//   let postText = textareaRef.current.value;
-//   alert(postText);
-// };
