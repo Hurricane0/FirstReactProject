@@ -22,27 +22,41 @@ let store = {
       textareaText: ""
     }
   },
-  getState() {
-    return this._state;
-  },
-  addPost() {
-    let newPost = {
-      id: 4,
-      postText: this._state.profilePage.textareaText
-    };
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.textareaText = "";
-    this._callSubscriber(this._state);
-  },
-  //Synchronous input text update
-  updateNewTextareaText(newtext) {
-    this._state.profilePage.textareaText = newtext;
-    this._callSubscriber(this._state);
+  dispatch(action) {
+    if (action.type === "ADD-POST") {
+      let newPost = {
+        id: 4,
+        postText: this._state.profilePage.textareaText
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.textareaText = "";
+      this._callSubscriber(this._state);
+    } else if (action.type === "UPDATE-NEW-TEXTAREA-TEXT") {
+      this._state.profilePage.textareaText = action.newtext;
+      this._callSubscriber(this._state);
+    }
   },
   //Default stab (Заглушка)
   _callSubscriber() {
     console.log("State has been changed");
   },
+  getState() {
+    return this._state;
+  },
+  // addPost() {
+  //   let newPost = {
+  //     id: 4,
+  //     postText: this._state.profilePage.textareaText
+  //   };
+  //   this._state.profilePage.posts.push(newPost);
+  //   this._state.profilePage.textareaText = "";
+  //   this._callSubscriber(this._state);
+  // },
+  //Synchronous input text update
+  // updateNewTextareaText(newtext) {
+  //   this._state.profilePage.textareaText = newtext;
+  //   this._callSubscriber(this._state);
+  // },
   //Pattern (Observer) for rerenderinng with no mistakes in cyclic dependence
   subscribe(observer) {
     this._callSubscriber = observer; //Changing rerenderEntireTree() function

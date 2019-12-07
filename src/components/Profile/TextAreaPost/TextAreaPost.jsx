@@ -4,11 +4,11 @@ import s from "./TextAreaPost.module.css";
 function TextAreaPost(props) {
   let textareaRef = React.createRef();
   let addPost = () => {
-    props.addPost();
+    props.dispatch({ type: "ADD-POST" });
   };
   let textareaInputFunc = () => {
     let inputText = textareaRef.current.value;
-    props.updateNewTextareaText(inputText);
+    props.dispatch({ type: "UPDATE-NEW-TEXTAREA-TEXT", newtext: inputText });
   };
 
   return (

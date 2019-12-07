@@ -12,8 +12,7 @@ function Profile(props) {
       <div>
         <TextAreaPost
           textareaText={props.profilePage.textareaText}
-          addPost={props.addPost}
-          updateNewTextareaText={props.updateNewTextareaText}
+          dispatch={props.dispatch}
         />
         {newPost}
       </div>
