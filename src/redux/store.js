@@ -1,3 +1,6 @@
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const ADD_POST = "ADD-POST";
+
 let store = {
   _state: {
     dialogsPage: {
@@ -19,20 +22,20 @@ let store = {
         { id: 2, postText: "There is the second post" },
         { id: 3, postText: "The third post!" }
       ],
-      textareaText: ""
+      newPostText: ""
     }
   },
   dispatch(action) {
-    if (action.type === "ADD-POST") {
+    if (action.type === ADD_POST) {
       let newPost = {
         id: 4,
-        postText: this._state.profilePage.textareaText
+        postText: this._state.profilePage.newPostText
       };
       this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.textareaText = "";
+      this._state.profilePage.newPostText = "";
       this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE-NEW-TEXTAREA-TEXT") {
-      this._state.profilePage.textareaText = action.newtext;
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
+      this._state.profilePage.newPostText = action.newtext;
       this._callSubscriber(this._state);
     }
   },
@@ -43,23 +46,22 @@ let store = {
   getState() {
     return this._state;
   },
-  // addPost() {
-  //   let newPost = {
-  //     id: 4,
-  //     postText: this._state.profilePage.textareaText
-  //   };
-  //   this._state.profilePage.posts.push(newPost);
-  //   this._state.profilePage.textareaText = "";
-  //   this._callSubscriber(this._state);
-  // },
-  //Synchronous input text update
-  // updateNewTextareaText(newtext) {
-  //   this._state.profilePage.textareaText = newtext;
-  //   this._callSubscriber(this._state);
-  // },
   //Pattern (Observer) for rerenderinng with no mistakes in cyclic dependence
   subscribe(observer) {
     this._callSubscriber = observer; //Changing rerenderEntireTree() function
   }
 };
+export const addPostActionCreator = () => {
+  return {
+    type: ADD_POST
+  };
+};
+
+export const updateNewPostTextActionCreator = newtext => {
+  return {
+    type: UPDATE_NEW_POST_TEXT,
+    newtext: newtext
+  };
+};
+
 export default store;

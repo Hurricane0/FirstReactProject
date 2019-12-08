@@ -11,7 +11,7 @@ function Profile(props) {
     <div className={s.wrapper}>
       <div>
         <TextAreaPost
-          textareaText={props.profilePage.textareaText}
+          newPostText={props.profilePage.newPostText}
           dispatch={props.dispatch}
         />
         {newPost}
