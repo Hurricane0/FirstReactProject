@@ -49,6 +49,7 @@ let store = {
         message: this._state.dialogsPage.newMessageText
       };
       this._state.dialogsPage.userMessages.push(newMessage);
+      this._state.dialogsPage.newMessageText = "";
       this._callSubscriber(this._state);
     }
   },
