@@ -1,5 +1,4 @@
 import React from "react";
-// import s from "./DialogsList.module.css";
 import DialogBlock from "./DialogBlock/DialogBlock";
 
 function DialogsList(props) {

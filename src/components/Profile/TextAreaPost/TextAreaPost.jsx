@@ -4,11 +4,14 @@ import {
   updateNewPostTextActionCreator,
   addPostActionCreator
 } from "../../../redux/store";
+
 function TextAreaPost(props) {
   let textareaRef = React.createRef();
+
   let addPost = () => {
     props.dispatch(addPostActionCreator());
   };
+
   let textareaInputFunc = () => {
     let inputText = textareaRef.current.value;
     props.dispatch(updateNewPostTextActionCreator(inputText));
@@ -19,8 +22,7 @@ function TextAreaPost(props) {
       <hr />
       <div className={s.textareaWrapper}>
         <textarea
-          name="textAreaPost"
-          id="textAreaPost"
+          className={s.textarea}
           maxLength="600"
           placeholder="Post something..."
           ref={textareaRef}

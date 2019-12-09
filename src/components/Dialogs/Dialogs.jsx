@@ -12,7 +12,7 @@ function Dialogs(props) {
       </div>
       {/* Dialogs Content */}
       <div className={s.dialogsContent}>
-        <Chat dialogsPage={props.dialogsPage} />
+        <Chat dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
       </div>
     </div>
   );
