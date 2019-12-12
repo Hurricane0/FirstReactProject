@@ -1,9 +1,9 @@
 import React from "react";
 import s from "./TextAreaPost.module.css";
 import {
-  updateNewPostTextActionCreator,
-  addPostActionCreator
-} from "../../../redux/store";
+  addPostActionCreator,
+  updateNewPostTextActionCreator
+} from "../../../redux/profileReducer";
 
 function TextAreaPost(props) {
   let textareaRef = React.createRef();

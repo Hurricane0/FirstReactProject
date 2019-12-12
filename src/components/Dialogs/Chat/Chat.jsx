@@ -3,7 +3,11 @@ import s from "./Chat.module.css";
 import {
   updateNewMessageActionCreator,
   sendMessageActionCreator
-} from "../../../redux/store";
+} from "../../../redux/dialogsReducer";
+// import {
+//   updateNewMessageActionCreator,
+//   sendMessageActionCreator
+// } from "../../../redux/store";
 
 function Chat(props) {
   let chat = props.dialogsPage.userMessages.map(user => (
