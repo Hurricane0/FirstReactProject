@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import s from "./Dialogs.module.css";
-import Chat from "./Chat/Chat";
 import DialogsList from "./DialogsList/DialogsList";
+import ChatContainer from "./Chat/ChatContainer";
 
 function Dialogs(props) {
   return (
@@ -13,7 +13,10 @@ function Dialogs(props) {
         </div>
         {/* Dialogs Content */}
         <div className={s.dialogsContent}>
-          <Chat dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
+          <ChatContainer
+            dialogsPage={props.dialogsPage}
+            dispatch={props.dispatch}
+          />
         </div>
       </div>
     </Fragment>

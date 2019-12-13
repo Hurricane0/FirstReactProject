@@ -1,25 +1,13 @@
 import React from "react";
 import s from "./Chat.module.css";
-import {
-  updateNewMessageActionCreator,
-  sendMessageActionCreator
-} from "../../../redux/dialogsReducer";
-// import {
-//   updateNewMessageActionCreator,
-//   sendMessageActionCreator
-// } from "../../../redux/store";
 
 function Chat(props) {
-  let chat = props.dialogsPage.userMessages.map(user => (
+  let chat = props.userMessages.map(user => (
     <div className={s.dialogsContent}>{user.message}</div>
   ));
-  let updateNewMessage = event => {
-    props.dispatch(updateNewMessageActionCreator(event.target.value));
+  let messageTextSynchronization = event => {
+    props.messageTextSynchronization(event);
   };
-  let sendMessage = () => {
-    props.dispatch(sendMessageActionCreator());
-  };
-
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
@@ -28,11 +16,11 @@ function Chat(props) {
           <textarea
             placeholder="Write a message..."
             className={s.textarea}
-            value={props.dialogsPage.newMessageText}
-            onChange={updateNewMessage}
+            value={props.newMessageText}
+            onChange={messageTextSynchronization}
           ></textarea>
           <div className={s.button_block}>
-            <button onClick={sendMessage} className={s.post_button}>
+            <button onClick={props.sendMessage} className={s.post_button}>
               Send
             </button>
           </div>

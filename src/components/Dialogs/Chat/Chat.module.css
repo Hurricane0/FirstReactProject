@@ -2,8 +2,8 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-  /* position: relative; */
   padding-bottom: 60px;
+  box-sizing: border-box;
 }
 .container::-webkit-scrollbar {
   width: 12px;

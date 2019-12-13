@@ -1,20 +1,12 @@
 import React from "react";
 import s from "./TextAreaPost.module.css";
-import {
-  addPostActionCreator,
-  updateNewPostTextActionCreator
-} from "../../../redux/profileReducer";
 
 function TextAreaPost(props) {
   let textareaRef = React.createRef();
 
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
-  };
-
-  let textareaInputFunc = () => {
+  let inputSynchronization = () => {
     let inputText = textareaRef.current.value;
-    props.dispatch(updateNewPostTextActionCreator(inputText));
+    props.inputSynchronization(inputText);
   };
 
   return (
@@ -27,11 +19,11 @@ function TextAreaPost(props) {
           placeholder="Post something..."
           ref={textareaRef}
           value={props.newPostText}
-          onChange={textareaInputFunc}
+          onChange={inputSynchronization}
         />
       </div>
       <div className={s.postButtonDiv}>
-        <button onClick={addPost}>Post</button>
+        <button onClick={props.addPost}>Post</button>
       </div>
     </div>
   );

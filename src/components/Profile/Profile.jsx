@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Profile.module.css";
 import Post from "./Post/Post";
-import TextAreaPost from "./TextAreaPost/TextAreaPost";
+import TextAreaPostContainer from "./TextAreaPost/TextAreaPostContainer";
 
 function Profile(props) {
   let newPost = props.profilePage.posts.map(post => (
@@ -10,7 +10,7 @@ function Profile(props) {
   return (
     <div className={s.wrapper}>
       <div>
-        <TextAreaPost
+        <TextAreaPostContainer
           newPostText={props.profilePage.newPostText}
           dispatch={props.dispatch}
         />
