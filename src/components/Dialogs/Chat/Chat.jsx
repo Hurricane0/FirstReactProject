@@ -6,7 +6,7 @@ function Chat(props) {
     <div className={s.dialogsContent}>{user.message}</div>
   ));
   let messageTextSynchronization = event => {
-    props.messageTextSynchronization(event);
+    props.messageTextSynchronization(event.target.value);
   };
   return (
     <div className={s.wrapper}>

@@ -4,27 +4,25 @@ import {
   sendMessageActionCreator
 } from "../../../redux/dialogsReducer";
 import Chat from "./Chat";
-// import {
-//   updateNewMessageActionCreator,
-//   sendMessageActionCreator
-// } from "../../../redux/store";
+import { connect } from "react-redux";
 
-function ChatContainer(props) {
-  let updateNewMessage = event => {
-    props.dispatch(updateNewMessageActionCreator(event.target.value));
+let mapStateToProps = state => {
+  return {
+    userMessages: state.dialogsPage.userMessages,
+    newMessageText: state.dialogsPage.newMessageText
   };
-  let sendMessage = () => {
-    props.dispatch(sendMessageActionCreator());
+};
+let mapDispatchToProps = dispatch => {
+  return {
+    messageTextSynchronization: inputText => {
+      dispatch(updateNewMessageActionCreator(inputText));
+    },
+    sendMessage: () => {
+      dispatch(sendMessageActionCreator());
+    }
   };
+};
 
-  return (
-    <Chat
-      userMessages={props.dialogsPage.userMessages}
-      messageTextSynchronization={updateNewMessage}
-      newMessageText={props.newMessageText}
-      sendMessage={sendMessage}
-    />
-  );
-}
+const ChatContainer = connect(mapStateToProps, mapDispatchToProps)(Chat);
 
 export default ChatContainer;
