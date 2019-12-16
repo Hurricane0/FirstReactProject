@@ -1,26 +1,29 @@
-import React from "react";
 import {
   addPostActionCreator,
   updateNewPostTextActionCreator
 } from "../../../redux/profileReducer";
 import TextAreaPost from "./TextAreaPost";
+import { connect } from "react-redux";
 
-function TextAreaPostContainer(props) {
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
+const mapStateToProps = state => {
+  return {
+    newPostText: state.profilePage.newPostText
   };
-
-  let inputSynchronization = inputText => {
-    props.dispatch(updateNewPostTextActionCreator(inputText));
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    inputSynchronization: inputText => {
+      dispatch(updateNewPostTextActionCreator(inputText));
+    },
+    addPost: () => {
+      dispatch(addPostActionCreator());
+    }
   };
+};
 
-  return (
-    <TextAreaPost
-      addPost={addPost}
-      inputSynchronization={inputSynchronization}
-      newPostText={props.newPostText}
-    />
-  );
-}
+const TextAreaPostContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TextAreaPost);
 
 export default TextAreaPostContainer;

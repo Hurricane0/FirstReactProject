@@ -4,16 +4,13 @@ import Post from "./Post/Post";
 import TextAreaPostContainer from "./TextAreaPost/TextAreaPostContainer";
 
 function Profile(props) {
-  let newPost = props.profilePage.posts.map(post => (
+  let newPost = props.posts.map(post => (
     <Post postText={post.postText} id={post.id} />
   ));
   return (
     <div className={s.wrapper}>
       <div>
-        <TextAreaPostContainer
-          newPostText={props.profilePage.newPostText}
-          dispatch={props.dispatch}
-        />
+        <TextAreaPostContainer />
         {newPost}
       </div>
     </div>
