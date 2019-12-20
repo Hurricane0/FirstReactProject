@@ -2,7 +2,7 @@
   display: inline-block;
   /* height: 100%; */
 }
-img {
+.avatar {
   width: 40px;
   height: 40px;
   margin: 0;

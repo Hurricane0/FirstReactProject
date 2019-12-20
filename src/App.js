@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Dialogs from "./components/Dialogs/Dialogs";
 import { Route } from "react-router-dom";
 import ProfileContainer from "./components/Profile/ProfileContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div className="main-content-wrapper">
           <Route path="/profile" render={() => <ProfileContainer />} />
           <Route path="/messages" render={() => <Dialogs />} />
+          <Route path="/users" render={() => <UsersContainer />} />
         </div>
       </div>
     </div>

@@ -12,11 +12,11 @@ function Header() {
           <NavLink activeClassName={s.activeLink} to="/messages">
             <li>Messages</li>
           </NavLink>
+          <NavLink activeClassName={s.activeLink} to="/users">
+            <li>Users</li>
+          </NavLink>
           <NavLink activeClassName={s.activeLink} to="/settings">
             <li>Settings</li>
-          </NavLink>
-          <NavLink activeClassName={s.activeLink} to="/about">
-            <li>About</li>
           </NavLink>
         </ul>
       </nav>

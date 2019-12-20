@@ -1,0 +1,68 @@
+.wrapper {
+  display: flex;
+  border-bottom: 1px solid #cdced3;
+  padding: 7px 5px;
+  min-height: 90px;
+}
+.left_block {
+  width: 9%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 8px;
+}
+.right_block {
+  width: 91%;
+  padding-left: 10px;
+  position: relative;
+  border-left: 1px solid #cdced3;
+}
+.follow_button {
+  color: #616162;
+  font-size: 12px;
+  background-color: #fec92d;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  transition: 0.2s;
+  padding: 4px 8px;
+  cursor: pointer;
+  outline: none;
+}
+.follow_button:hover {
+  color: #000;
+  background-color: #ebb925;
+}
+.avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.username {
+  color: #696a6c;
+  border: 1px solid rgba(0, 0, 0, 0.164);
+  border-radius: 5px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 5px;
+}
+.status {
+  color: #858586;
+  display: block;
+  bottom: 5px;
+  position: absolute;
+}
+.country {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #ebb925;
+}
+.city {
+  position: absolute;
+  color: #ebb925;
+  right: 5px;
+  bottom: 5px;
+}

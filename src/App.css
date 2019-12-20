@@ -11,3 +11,13 @@ body {
   background-color: #fefeff;
   min-height: 200vh;
 }
+@media screen and (max-width: 1670px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+  }
+}
