@@ -1,5 +1,6 @@
 .header {
-  background-color: rgba(232, 234, 241, 0.76);
+  /* background-color: rgba(232, 234, 241, 0.76); */
+  background-color: #2c2c2c;
   border-bottom: 1px solid rgba(145, 144, 144, 0.452);
   position: fixed;
   width: 100%;
@@ -23,15 +24,16 @@ nav ul {
 nav li {
   padding: 5px 40px;
   font-size: 20px;
-  color: rgba(49, 48, 48, 0.74);
+  /* color: rgba(49, 48, 48, 0.74); */
+  color: rgb(192, 192, 192);
   transition: 0.3s;
-  border-right: 1px solid rgba(49, 48, 48, 0.151);
-  border-left: 1px solid rgba(49, 48, 48, 0.151);
+  border-right: 1px solid rgba(104, 98, 98, 0.363);
+  border-left: 1px solid rgba(104, 98, 98, 0.363);
 }
 nav li:hover {
-  color: #000;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
+  color: rgb(218, 214, 214);
+  border-right: 1px solid rgb(218, 214, 214);
+  border-left: 1px solid rgb(218, 214, 214);
 }
 nav a {
   text-decoration: none;
@@ -42,6 +44,6 @@ a.activeLink li {
   border-left: 1px solid #000;
   color: #000;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.705);
-  box-shadow: 0 0 5px 7px rgba(255, 255, 255, 0.705);
+  background-color: rgba(151, 150, 150, 0.705);
+  box-shadow: 0 0 5px 7px rgba(151, 150, 150, 0.705);
 }

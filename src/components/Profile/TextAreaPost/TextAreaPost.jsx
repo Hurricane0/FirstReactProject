@@ -11,7 +11,7 @@ function TextAreaPost(props) {
 
   return (
     <div className={s.wrapper}>
-      <hr />
+      <hr className={s.hr} />
       <div className={s.textareaWrapper}>
         <textarea
           className={s.textarea}
