@@ -11,7 +11,7 @@ let UserBlock = props => {
   };
   let followingButtonStyle = {
     backgroundColor: "#04D91B",
-    boxShadow: "inset 0px -2px 1px #03a013, inset 0px 2px 1px #03a013"
+    boxShadow: "inset 0px -2px 1px #03a013, inset 0px 2px 2px #03a013"
   };
   let followButtonStyle = {
     backgroundColor: "#fec92d",

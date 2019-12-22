@@ -5,6 +5,7 @@ import * as axios from "axios";
 class Users extends React.Component {
   constructor(props) {
     super(props);
+    //axios test using json-server
     axios("http://localhost:3000/items").then(response => {
       this.props.setUsers(response.data);
     });
