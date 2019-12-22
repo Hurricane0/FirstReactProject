@@ -18,7 +18,7 @@
   border-left: 1px solid #cdced3;
 }
 .follow_button {
-  color: #616162;
+  color: rgb(75, 75, 75);
   font-size: 12px;
   background-color: #fec92d;
   text-transform: uppercase;
@@ -29,6 +29,8 @@
   padding: 4px 8px;
   cursor: pointer;
   outline: none;
+  font-weight: bold;
+  box-shadow: 0px 2px 0px #03a013;
 }
 .follow_button:hover {
   color: #000;
