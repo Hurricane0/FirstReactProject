@@ -3,35 +3,10 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS";
 
 let initialState = {
-  users: [
-    // {
-    //   id: 1,
-    //   username: "Nikita Dvorstov",
-    //   status: "I am junior developer...",
-    //   location: { country: "Ukraine", city: "Kirovograd" },
-    //   followed: false,
-    //   avatarUrl:
-    //     "  "
-    // },
-    // {
-    //   id: 2,
-    //   username: "Sonya Gurina",
-    //   status: "I am junior developer...",
-    //   location: { country: "Russia", city: "Moscow" },
-    //   followed: true,
-    //   avatarUrl:
-    //     "https://i7.pngguru.com/preview/340/946/334/avatar-user-computer-icons-software-developer-avatar-thumbnail.jpg"
-    // },
-    // {
-    //   id: 3,
-    //   username: "Roman Dvortsov",
-    //   status: "I am junior developer...",
-    //   location: { country: "Belarus", city: "Mynsk" },
-    //   followed: false,
-    //   avatarUrl:
-    //     "https://i7.pngguru.com/preview/340/946/334/avatar-user-computer-icons-software-developer-avatar-thumbnail.jpg"
-    // }
-  ]
+  users: [],
+  totalUsersCount: 28,
+  pageSize: 3,
+  currentPage: 1
 };
 
 const usersReducer = (state = initialState, action) => {

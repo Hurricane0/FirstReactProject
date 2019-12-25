@@ -43,9 +43,9 @@ let UserBlock = props => {
       </div>
       <div className={s.right_block}>
         <span className={s.username}>{props.user.name}</span>
-        <span className={s.status}>{props.user.status}</span>
-        <span className={s.country}>{"props.user.location.country"}</span>
-        <span className={s.city}>{"props.user.location.city"}</span>
+        <span className={s.status}>Some status...</span>
+        <span className={s.country}>Ukraine</span>
+        <span className={s.city}>Kiev</span>
       </div>
     </div>
   );
