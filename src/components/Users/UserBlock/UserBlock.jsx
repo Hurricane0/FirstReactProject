@@ -20,7 +20,16 @@ let UserBlock = props => {
   return (
     <div className={s.wrapper}>
       <div className={s.left_block}>
-        <img className={s.avatar} src={userAvatar} alt="UserAvatar" />
+        {props.user.photos.small != null ? (
+          <img
+            className={s.avatar}
+            src={props.user.photos.small}
+            alt="UserAvatar"
+          />
+        ) : (
+          <img className={s.avatar} src={userAvatar} alt="UserAvatar" />
+        )}
+
         {props.user.followed ? (
           <button
             key={props.user.id}
