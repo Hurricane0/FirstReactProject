@@ -5,14 +5,15 @@ import { setUserData } from "../../redux/authReducer";
 import { connect } from "react-redux";
 class HeaderContainer extends React.Component {
   componentDidMount() {
-    console.log("hello");
     axios
       .get("https://social-network.samuraijs.com/api/1.0/auth/me", {
         withCredentials: true
       })
       .then(response => {
         let { id, login, email } = response.data.data;
-        this.props.setUserData(id, login, email);
+        response.data.resultCode === 1
+          ? this.props.setUserData(id, login, email, false)
+          : this.props.setUserData(id, login, email, true);
       });
   }
   render() {

@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Header.module.css"; //Созданние класса для использования компонентного CSS
+import s from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 import LoginedUserInfo from "./LoginedUserInfo/LoginedUserInfo";
 function Header(props) {

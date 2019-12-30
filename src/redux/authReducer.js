@@ -1,10 +1,10 @@
 const SET_USER_DATA = "SET-USER-DATA";
 
 let initialState = {
-  isAuth: false,
   userId: null,
   login: null,
-  email: null
+  email: null,
+  isAuth: false
 };
 
 const authReducer = (state = initialState, action) => {
@@ -12,8 +12,7 @@ const authReducer = (state = initialState, action) => {
     case SET_USER_DATA:
       return {
         ...state,
-        ...action.userData,
-        isAuth: true
+        ...action.userData
       };
 
     default:
@@ -21,12 +20,13 @@ const authReducer = (state = initialState, action) => {
   }
 };
 
-export const setUserData = (userId, login, email) => ({
+export const setUserData = (userId, login, email, isAuth) => ({
   type: SET_USER_DATA,
   userData: {
     userId,
     login,
-    email
+    email,
+    isAuth
   }
 });
 
