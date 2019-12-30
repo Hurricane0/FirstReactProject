@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./UserBlock.module.css";
-import userAvatar from "../../../assets/images/userAvatar.jpg";
+import undefinedUserAvatar from "../../../assets/images/undefinedUserAvatar.png";
 import { NavLink } from "react-router-dom";
 
 let UserBlock = props => {
@@ -31,7 +31,11 @@ let UserBlock = props => {
           </NavLink>
         ) : (
           <NavLink to={"/profile/" + props.user.id}>
-            <img className={s.avatar} src={userAvatar} alt="UserAvatar" />
+            <img
+              className={s.avatar}
+              src={undefinedUserAvatar}
+              alt="UserAvatar"
+            />
           </NavLink>
         )}
 

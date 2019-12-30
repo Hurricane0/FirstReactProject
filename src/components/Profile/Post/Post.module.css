@@ -3,6 +3,7 @@
   height: 40px;
   margin: 0;
   border-radius: 60px;
+  user-select: none;
 }
 .post {
   color: rgba(44, 43, 43, 0.616);
