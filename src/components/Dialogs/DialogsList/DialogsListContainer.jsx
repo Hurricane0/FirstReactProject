@@ -6,13 +6,7 @@ const mapStateToProps = state => {
     userDialogs: state.dialogsPage.userDialogs
   };
 };
-const mapDispatchToProps = dispatch => {
-  return {};
-};
 
-const DialogsListContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DialogsList);
+const DialogsListContainer = connect(mapStateToProps)(DialogsList);
 
 export default DialogsListContainer;

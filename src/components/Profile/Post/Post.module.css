@@ -9,13 +9,13 @@
   display: flex;
   align-items: center;
   padding-left: 7px;
-  margin-bottom: 9px;
+  margin-bottom: 15px;
   max-width: 100%;
 }
 
 .post p {
   max-width: 100%;
-  padding-right: 5px;
+  padding-left: 10px;
   font-size: 15px;
   line-height: 133%;
 }

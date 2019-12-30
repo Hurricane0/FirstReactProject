@@ -1,5 +1,6 @@
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const INPUT_SYNCHRONIZATION = "INPUT-SYNCHRONIZATION";
 const ADD_POST = "ADD-POST";
+const SET_CURRENT_PROFILE = "SET-CURRENT-PROFILE";
 
 let initialState = {
   posts: [
@@ -7,11 +8,11 @@ let initialState = {
     { id: 2, postText: "There is the second post" },
     { id: 3, postText: "The third post!" }
   ],
-  newPostText: ""
+  newPostText: "",
+  profile: null
 };
 
 const profileReducer = (state = initialState, action) => {
-  //state = this._state.profilePage
   switch (action.type) {
     case ADD_POST:
       return {
@@ -25,21 +26,29 @@ const profileReducer = (state = initialState, action) => {
         ],
         newPostText: ""
       };
-    case UPDATE_NEW_POST_TEXT:
+    case INPUT_SYNCHRONIZATION:
       return {
         ...state,
         newPostText: action.newtext
+      };
+    case SET_CURRENT_PROFILE:
+      return {
+        ...state,
+        profile: action.profile
       };
     default:
       return state;
   }
 };
 //ActionCreators для того, чтобы передавать в качестве аргументов в dispatch
-export const addPostActionCreator = () => ({ type: ADD_POST });
-
-export const updateNewPostTextActionCreator = newtext => ({
-  type: UPDATE_NEW_POST_TEXT,
-  newtext: newtext
+export const addPost = () => ({ type: ADD_POST });
+export const inputSynchronization = newtext => ({
+  type: INPUT_SYNCHRONIZATION,
+  newtext
+});
+export const setCurrentProfile = profile => ({
+  type: SET_CURRENT_PROFILE,
+  profile
 });
 
 export default profileReducer;

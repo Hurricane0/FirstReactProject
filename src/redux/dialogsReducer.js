@@ -40,9 +40,9 @@ const dialogsReducer = (state = initialState, action) => {
   }
 };
 //ActionCreators для того, чтобы передавать в качестве аргументов в dispatch
-export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE });
+export const sendMessage = () => ({ type: SEND_MESSAGE });
 
-export const updateNewMessageActionCreator = messageText => ({
+export const messageTextSynchronization = messageText => ({
   type: UPDATE_NEW_MESSAGE,
   messageText: messageText
 });

@@ -6,6 +6,7 @@
   min-height: 57px;
   box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.233);
   z-index: 3;
+  user-select: none;
 }
 .navLink {
   box-sizing: border-box;

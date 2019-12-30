@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./UserBlock.module.css";
 import userAvatar from "../../../assets/images/userAvatar.jpg";
+import { NavLink } from "react-router-dom";
 
 let UserBlock = props => {
   let unfollow = () => {
@@ -21,13 +22,17 @@ let UserBlock = props => {
     <div className={s.wrapper}>
       <div className={s.left_block}>
         {props.user.photos.small != null ? (
-          <img
-            className={s.avatar}
-            src={props.user.photos.small}
-            alt="UserAvatar"
-          />
+          <NavLink to={"/profile/" + props.user.id}>
+            <img
+              className={s.avatar}
+              src={props.user.photos.small}
+              alt="UserAvatar"
+            />
+          </NavLink>
         ) : (
-          <img className={s.avatar} src={userAvatar} alt="UserAvatar" />
+          <NavLink to={"/profile/" + props.user.id}>
+            <img className={s.avatar} src={userAvatar} alt="UserAvatar" />
+          </NavLink>
         )}
 
         {props.user.followed ? (
