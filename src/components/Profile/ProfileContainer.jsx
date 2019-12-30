@@ -8,7 +8,6 @@ import { withRouter } from "react-router-dom";
 class ProfileContainer extends React.Component {
   componentDidMount() {
     let userId = this.props.match.params.userId;
-    console.log(userId);
     if (!userId) {
       userId = 2;
     }
@@ -25,7 +24,8 @@ class ProfileContainer extends React.Component {
 const mapStateToProps = state => {
   return {
     posts: state.profilePage.posts,
-    profile: state.profilePage.profile
+    profile: state.profilePage.profile,
+    personalUserId: state.auth.userId
   };
 };
 

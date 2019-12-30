@@ -12,6 +12,7 @@ import * as axios from "axios";
 
 class UsersContainer extends React.Component {
   componentDidMount() {
+    console.log("user");
     this.props.toggleIsFetching(true);
     axios
       .get(

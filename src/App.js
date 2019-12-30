@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
 import Dialogs from "./components/Dialogs/Dialogs";
 import { Route } from "react-router-dom";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 function App() {
   return (
     <div className="container">
-      <Header />
+      <HeaderContainer />
       <div className="wrapper">
         <div className="main-content-wrapper">
           <Route path="/profile/:userId?" render={() => <ProfileContainer />} />

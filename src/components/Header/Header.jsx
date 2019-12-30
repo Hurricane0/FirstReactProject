@@ -1,9 +1,17 @@
 import React from "react";
 import s from "./Header.module.css"; //Созданние класса для использования компонентного CSS
 import { NavLink } from "react-router-dom";
-function Header() {
+import LoginedUserInfo from "./LoginedUserInfo/LoginedUserInfo";
+function Header(props) {
   return (
-    <header className={s.header}>
+    <div className={s.header}>
+      {props.isAuth ? (
+        <LoginedUserInfo username={props.username} />
+      ) : (
+        <NavLink to="/login" className={s.auth}>
+          Login
+        </NavLink>
+      )}
       <nav>
         <ul>
           <NavLink activeClassName={s.activeLink} to="/profile">
@@ -20,7 +28,7 @@ function Header() {
           </NavLink>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 }
 
