@@ -24,6 +24,8 @@ let Users = props => {
       {props.users.map(user => (
         <div key={user.id}>
           <UserBlock
+            inFollowingProcess={props.inFollowingProcess}
+            toggleInFollowingProcess={props.toggleInFollowingProcess}
             user={user}
             follow={props.follow}
             unfollow={props.unfollow}

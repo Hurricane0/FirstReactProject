@@ -1,40 +1,22 @@
 import React from "react";
-import s from "./UserBlock.module.css";
-import undefinedUserAvatar from "../../../assets/images/undefinedUserAvatar.png";
 import { NavLink } from "react-router-dom";
-import * as axios from "axios";
-
+import { usersAPI } from "../../../api/api";
+import undefinedUserAvatar from "../../../assets/images/undefinedUserAvatar.png";
+import s from "./UserBlock.module.css";
 let UserBlock = props => {
   let unfollow = () => {
-    axios
-      .delete(
-        `https://social-network.samuraijs.com/api/1.0/follow/${props.user.id}`,
-        {
-          withCredentials: true,
-          headers: {
-            "API-KEY": "95e50084-bff9-4ac9-94e0-362822abceb9"
-          }
-        }
-      )
-      .then(response => {
-        response.data.resultCode === 0 && props.unfollow(props.user.id);
-      });
+    props.toggleInFollowingProcess(true, props.user.id);
+    usersAPI.unfollow(props.user.id).then(data => {
+      data.resultCode === 0 && props.unfollow(props.user.id);
+      props.toggleInFollowingProcess(false, props.user.id);
+    });
   };
   let follow = () => {
-    axios
-      .post(
-        `https://social-network.samuraijs.com/api/1.0/follow/${props.user.id}`,
-        {},
-        {
-          withCredentials: true,
-          headers: {
-            "API-KEY": "95e50084-bff9-4ac9-94e0-362822abceb9"
-          }
-        }
-      )
-      .then(response => {
-        response.data.resultCode === 0 && props.follow(props.user.id);
-      });
+    props.toggleInFollowingProcess(true, props.user.id);
+    usersAPI.follow(props.user.id).then(data => {
+      data.resultCode === 0 && props.follow(props.user.id);
+      props.toggleInFollowingProcess(false, props.user.id);
+    });
   };
   let followingButtonStyle = {
     backgroundColor: "#04D91B",
@@ -64,9 +46,9 @@ let UserBlock = props => {
             />
           </NavLink>
         )}
-
         {props.user.followed ? (
           <button
+            disabled={props.inFollowingProcess.some(id => id === props.user.id)}
             key={props.user.id}
             onClick={unfollow}
             className={s.follow_button}
@@ -76,6 +58,7 @@ let UserBlock = props => {
           </button>
         ) : (
           <button
+            disabled={props.inFollowingProcess.some(id => id === props.user.id)}
             key={props.user.id}
             onClick={follow}
             className={s.follow_button}

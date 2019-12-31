@@ -36,6 +36,9 @@
   color: #000;
   background-color: #ebb925;
 }
+.follow_button:disabled {
+  opacity: 0.5;
+}
 .avatar {
   height: 60px;
   width: 60px;
