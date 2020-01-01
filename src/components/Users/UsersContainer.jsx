@@ -44,7 +44,8 @@ const mapStateToProps = state => {
     pageSize: state.usersPage.pageSize,
     currentPage: state.usersPage.currentPage,
     isFetching: state.usersPage.isFetching,
-    inFollowingProcess: state.usersPage.inFollowingProcess
+    inFollowingProcess: state.usersPage.inFollowingProcess,
+    isAuth: state.auth.isAuth
   };
 };
 export default connect(mapStateToProps, {
@@ -55,5 +56,5 @@ export default connect(mapStateToProps, {
   getUsersThunk,
   setCurrentPageUsersThunk,
   followThunk,
-  unfollowThunk,
+  unfollowThunk
 })(UsersContainer);

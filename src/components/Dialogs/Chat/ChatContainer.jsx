@@ -13,10 +13,9 @@ let mapStateToProps = state => {
   };
 };
 
-const ChatContainer = connect(mapStateToProps, 
-  {
-    messageTextSynchronization,
-    sendMessage
-  })(Chat);
+const ChatContainer = connect(mapStateToProps, {
+  messageTextSynchronization,
+  sendMessage
+})(Chat);
 
 export default ChatContainer;

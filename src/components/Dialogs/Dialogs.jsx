@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
-import s from "./Dialogs.module.css";
+import { Redirect } from "react-router-dom";
 import ChatContainer from "./Chat/ChatContainer";
+import s from "./Dialogs.module.css";
 import DialogsListContainer from "./DialogsList/DialogsListContainer";
 
-function Dialogs() {
+function Dialogs(props) {
+  if (!props.isAuth) return <Redirect to="/login" />;
   return (
     <Fragment>
       <div className={s.dialogsWrapper}>
