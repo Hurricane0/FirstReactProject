@@ -1,3 +1,5 @@
+import { profileAPI } from "../api/api";
+
 const INPUT_SYNCHRONIZATION = "INPUT-SYNCHRONIZATION";
 const ADD_POST = "ADD-POST";
 const SET_CURRENT_PROFILE = "SET-CURRENT-PROFILE";
@@ -50,5 +52,16 @@ export const setCurrentProfile = profile => ({
   type: SET_CURRENT_PROFILE,
   profile
 });
+
+export const setCurrentProflieThunk = userId => {
+  return dispatch => {
+    if (!userId) {
+      userId = 2;
+    }
+    profileAPI.getProfile(userId).then(data => {
+      dispatch(setCurrentProfile(data));
+    });
+  };
+};
 
 export default profileReducer;

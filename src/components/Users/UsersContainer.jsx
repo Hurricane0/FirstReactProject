@@ -1,32 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
-import { usersAPI } from "../../api/api";
 import {
   follow,
-  setCurrentPage,
-  setUsers,
+  getUsersThunk,
+  setCurrentPageUsersThunk,
+  toggleInFollowingProcess,
   toggleIsFetching,
   unfollow,
-  toggleInFollowingProcess
+  followThunk,
+  unfollowThunk
 } from "../../redux/usersReducer";
 import Users from "./Users";
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.toggleIsFetching(true);
-    usersAPI
-      .getUsers(this.props.currentPage, this.props.pageSize)
-      .then(data => {
-        this.props.toggleIsFetching(false);
-        this.props.setUsers(data.items);
-      });
+    this.props.getUsersThunk(this.props.currentPage, this.props.pageSize);
   }
   onPageChanged = newPage => {
-    this.props.setCurrentPage(newPage);
-    this.props.toggleIsFetching(true);
-    usersAPI.getUsers(newPage, this.props.pageSize).then(data => {
-      this.props.toggleIsFetching(false);
-      this.props.setUsers(data.items);
-    });
+    this.props.setCurrentPageUsersThunk(newPage, this.props.pageSize);
   };
   render() {
     let pagesCount = Math.ceil(
@@ -40,15 +30,8 @@ class UsersContainer extends React.Component {
       <Users
         pages={pages}
         pagesCount={pagesCount}
-        currentPage={this.props.currentPage}
+        {...this.props}
         onPageChanged={this.onPageChanged}
-        users={this.props.users}
-        follow={this.props.follow}
-        unfollow={this.props.unfollow}
-        toggleIsFetching={this.toggleIsFetching}
-        isFetching={this.props.isFetching}
-        inFollowingProcess={this.props.inFollowingProcess}
-        toggleInFollowingProcess={this.props.toggleInFollowingProcess}
       />
     );
   }
@@ -67,8 +50,10 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
   follow,
   unfollow,
-  setUsers,
-  setCurrentPage,
   toggleIsFetching,
-  toggleInFollowingProcess
+  toggleInFollowingProcess,
+  getUsersThunk,
+  setCurrentPageUsersThunk,
+  followThunk,
+  unfollowThunk,
 })(UsersContainer);

@@ -1,22 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { usersAPI } from "../../../api/api";
 import undefinedUserAvatar from "../../../assets/images/undefinedUserAvatar.png";
 import s from "./UserBlock.module.css";
 let UserBlock = props => {
   let unfollow = () => {
-    props.toggleInFollowingProcess(true, props.user.id);
-    usersAPI.unfollow(props.user.id).then(data => {
-      data.resultCode === 0 && props.unfollow(props.user.id);
-      props.toggleInFollowingProcess(false, props.user.id);
-    });
+    props.unfollowThunk(props.user.id);
   };
+
   let follow = () => {
-    props.toggleInFollowingProcess(true, props.user.id);
-    usersAPI.follow(props.user.id).then(data => {
-      data.resultCode === 0 && props.follow(props.user.id);
-      props.toggleInFollowingProcess(false, props.user.id);
-    });
+    props.followThunk(props.user.id);
   };
   let followingButtonStyle = {
     backgroundColor: "#04D91B",

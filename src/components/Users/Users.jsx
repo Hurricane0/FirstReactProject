@@ -27,8 +27,8 @@ let Users = props => {
             inFollowingProcess={props.inFollowingProcess}
             toggleInFollowingProcess={props.toggleInFollowingProcess}
             user={user}
-            follow={props.follow}
-            unfollow={props.unfollow}
+            followThunk={props.followThunk}
+            unfollowThunk={props.unfollowThunk}
           />
         </div>
       ))}
