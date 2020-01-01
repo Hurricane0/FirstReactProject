@@ -1,11 +1,9 @@
 import React from "react";
+import Preloader from "../common/Prealoader/Prealoader";
 import UserBlock from "./UserBlock/UserBlock";
 import s from "./Users.module.css";
-import Preloader from "../common/Prealoader/Prealoader";
-import { Redirect } from "react-router-dom";
 
 let Users = props => {
-  if (!props.isAuth) return <Redirect to="/login" />;
   return (
     <div>
       {props.isFetching && <Preloader />}

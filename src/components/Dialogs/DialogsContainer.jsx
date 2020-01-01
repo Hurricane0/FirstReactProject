@@ -1,15 +1,11 @@
 import React from "react";
-import { connect } from "react-redux";
+import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 import Dialogs from "./Dialogs";
 
 class DialogsContainer extends React.Component {
   render() {
-    return <Dialogs isAuth={this.props.isAuth} />;
+    return <Dialogs />;
   }
 }
-
-const mapStateToProps = state => ({
-  isAuth: state.auth.isAuth
-});
-
-export default connect(mapStateToProps)(DialogsContainer);
+let AuthRedirectComponent = withAuthRedirect(DialogsContainer);
+export default AuthRedirectComponent;
