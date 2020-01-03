@@ -1,8 +1,9 @@
 import { profileAPI } from "../api/api";
 
-const INPUT_SYNCHRONIZATION = "INPUT-SYNCHRONIZATION";
-const ADD_POST = "ADD-POST";
-const SET_CURRENT_PROFILE = "SET-CURRENT-PROFILE";
+const INPUT_SYNCHRONIZATION = "INPUT_SYNCHRONIZATION";
+const ADD_POST = "ADD_POST";
+const SET_CURRENT_PROFILE = "SET_CURRENT_PROFILE";
+const SET_USER_STATUS = "SET_USER_STATUS";
 
 let initialState = {
   posts: [
@@ -11,7 +12,8 @@ let initialState = {
     { id: 3, postText: "The third post!" }
   ],
   newPostText: "",
-  profile: null
+  profile: null,
+  userStatus: ""
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -38,6 +40,12 @@ const profileReducer = (state = initialState, action) => {
         ...state,
         profile: action.profile
       };
+    case SET_USER_STATUS:
+      return {
+        ...state,
+        userStatus: action.userStatus
+      };
+
     default:
       return state;
   }
@@ -52,16 +60,35 @@ export const setCurrentProfile = profile => ({
   type: SET_CURRENT_PROFILE,
   profile
 });
-
+export const setUserStatus = userStatus => ({
+  type: SET_USER_STATUS,
+  userStatus
+});
+/////////////////////////////////////////////////
 export const setCurrentProflieThunk = userId => {
   return dispatch => {
     if (!userId) {
-      userId = 2;
+      userId = 5500;
     }
     profileAPI.getProfile(userId).then(data => {
       dispatch(setCurrentProfile(data));
     });
   };
+};
+export const getUserStatus = userId => dispatch => {
+  if (!userId) {
+    userId = 5500;
+  }
+  profileAPI.getUserStatus(userId).then(response => {
+    dispatch(setUserStatus(response.data || "Write your status..."));
+  });
+};
+export const updateUserStatus = userStatus => dispatch => {
+  profileAPI.updateUserStatus(userStatus).then(response => {
+    if (response.data.resultCode === 0) {
+      dispatch(setUserStatus(userStatus || "Write your status..."));
+    }
+  });
 };
 
 export default profileReducer;

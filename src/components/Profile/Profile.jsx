@@ -18,7 +18,11 @@ function Profile(props) {
   ));
   return (
     <div className={s.wrapper}>
-      <ProfileInfo profile={props.profile} />
+      <ProfileInfo
+        profile={props.profile}
+        userStatus={props.userStatus}
+        updateUserStatus={props.updateUserStatus}
+      />
       <div>
         <TextAreaPostContainer />
         {newPost}

@@ -6,7 +6,6 @@ let UserBlock = props => {
   let unfollow = () => {
     props.unfollowThunk(props.user.id);
   };
-
   let follow = () => {
     props.followThunk(props.user.id);
   };

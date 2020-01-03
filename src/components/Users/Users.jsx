@@ -25,7 +25,6 @@ let Users = props => {
         <div key={user.id}>
           <UserBlock
             inFollowingProcess={props.inFollowingProcess}
-            toggleInFollowingProcess={props.toggleInFollowingProcess}
             user={user}
             followThunk={props.followThunk}
             unfollowThunk={props.unfollowThunk}
