@@ -20,3 +20,6 @@
   font-size: 15px;
   line-height: 133%;
 }
+.undefinedUserAvatar {
+  border: 1px solid #dbdddf;
+}

@@ -1,6 +1,5 @@
 import { profileAPI } from "../api/api";
 
-const INPUT_SYNCHRONIZATION = "INPUT_SYNCHRONIZATION";
 const ADD_POST = "ADD_POST";
 const SET_CURRENT_PROFILE = "SET_CURRENT_PROFILE";
 const SET_USER_STATUS = "SET_USER_STATUS";
@@ -11,7 +10,6 @@ let initialState = {
     { id: 2, postText: "There is the second post" },
     { id: 3, postText: "The third post!" }
   ],
-  newPostText: "",
   profile: null,
   userStatus: ""
 };
@@ -25,15 +23,10 @@ const profileReducer = (state = initialState, action) => {
           ...state.posts,
           {
             id: 4,
-            postText: state.newPostText
+            postText: action.postText
           }
         ],
         newPostText: ""
-      };
-    case INPUT_SYNCHRONIZATION:
-      return {
-        ...state,
-        newPostText: action.newtext
       };
     case SET_CURRENT_PROFILE:
       return {
@@ -51,11 +44,7 @@ const profileReducer = (state = initialState, action) => {
   }
 };
 //ActionCreators для того, чтобы передавать в качестве аргументов в dispatch
-export const addPost = () => ({ type: ADD_POST });
-export const inputSynchronization = newtext => ({
-  type: INPUT_SYNCHRONIZATION,
-  newtext
-});
+export const addPostAC = postText => ({ type: ADD_POST, postText });
 export const setCurrentProfile = profile => ({
   type: SET_CURRENT_PROFILE,
   profile

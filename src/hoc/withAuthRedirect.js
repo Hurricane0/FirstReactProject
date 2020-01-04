@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-//Если по кличу на стрраничку нужен редирект на Логин страницу, то просто оборачиваем
+//Если по кличу на страничку нужен редирект на Логин страницу, то просто оборачиваем
 //компонент, который не должен отобразиться, в withAuthRedirect(Component)
 let mapStateToProps = state => {
   return {

@@ -4,7 +4,8 @@ import { withRouter } from "react-router-dom";
 import {
   setCurrentProflieThunk,
   getUserStatus,
-  updateUserStatus
+  updateUserStatus,
+  addPostAC
 } from "../../redux/profileReducer";
 import Profile from "./Profile";
 import { compose } from "redux";
@@ -31,7 +32,8 @@ export default compose(
   connect(mapStateToProps, {
     setCurrentProflieThunk,
     getUserStatus,
-    updateUserStatus
+    updateUserStatus,
+    addPostAC
   }),
   withRouter
 )(ProfileContainer);

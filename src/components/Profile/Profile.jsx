@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Profile.module.css";
 import Post from "./Post/Post";
-import TextAreaPostContainer from "./TextAreaPost/TextAreaPostContainer";
+import TextAreaPost from "./TextAreaPost/TextAreaPost";
 import Preloader from "../common/Prealoader/Prealoader";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
@@ -11,11 +11,15 @@ function Profile(props) {
   }
   let newPost = props.posts.map(post => (
     <Post
+      key={post.id}
       userAvatar={props.profile.photos.small}
       postText={post.postText}
       id={post.id}
     />
   ));
+  let addPost = textareaData => {
+    props.addPostAC(textareaData.postText);
+  };
   return (
     <div className={s.wrapper}>
       <ProfileInfo
@@ -24,7 +28,7 @@ function Profile(props) {
         updateUserStatus={props.updateUserStatus}
       />
       <div>
-        <TextAreaPostContainer />
+        <TextAreaPost onSubmit={addPost} />
         {newPost}
       </div>
     </div>
