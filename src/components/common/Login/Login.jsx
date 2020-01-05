@@ -2,6 +2,9 @@ import React from "react";
 import s from "./Login.module.css";
 import fs from "./LoginForm.module.css";
 import { reduxForm, Field } from "redux-form";
+import { required, maxLengthCreator } from "../../../utilities/validators";
+import { Input } from "../FormsControl/FormsControl";
+const maxLength = maxLengthCreator(25);
 
 let Login = () => {
   let onSubmit = formData => {
@@ -21,10 +24,20 @@ let LoginForm = props => {
   return (
     <form onSubmit={props.handleSubmit} className={fs.wrapper}>
       <div>
-        <Field component={"input"} name={"userLogin"} placeholder={"login"} />
+        <Field
+          component={Input}
+          name={"userLogin"}
+          placeholder={"login"}
+          validate={[required, maxLength]}
+        />
       </div>
       <div>
-        <Field component={"input"} name={"password"} placeholder={"password"} />
+        <Field
+          component={Input}
+          name={"password"}
+          placeholder={"password"}
+          validate={[required, maxLength]}
+        />
       </div>
       <div>
         <Field

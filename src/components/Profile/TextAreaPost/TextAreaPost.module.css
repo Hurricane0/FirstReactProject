@@ -20,7 +20,7 @@ hr {
 .textarea {
   z-index: 2;
   font-family: "Roboto", sans-serif;
-  width: 40%;
+  width: 100%;
   min-height: 50px;
   resize: none;
   border-radius: 8px;

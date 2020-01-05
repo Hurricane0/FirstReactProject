@@ -1,0 +1,11 @@
+.wrapper {
+  z-index: 3;
+  width: 50%;
+}
+.error textarea {
+  box-shadow: inset 0 0 0.25rem red;
+}
+.error span {
+  color: red;
+  display: flex;
+}

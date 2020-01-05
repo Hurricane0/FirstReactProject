@@ -1,6 +1,10 @@
 import React from "react";
 import s from "./TextAreaPost.module.css";
 import { reduxForm, Field } from "redux-form";
+import { required, maxLengthCreator } from "../../../utilities/validators";
+import { Textarea } from "../../common/FormsControl/FormsControl";
+
+const maxLength = maxLengthCreator(10);
 
 let TextAreaPost = props => {
   return (
@@ -9,10 +13,10 @@ let TextAreaPost = props => {
         <hr />
         <div className={s.textareaWrapper}>
           <Field
-            component="textarea"
+            component={Textarea}
+            validate={[required, maxLength]}
             name="postText"
             className={s.textarea}
-            maxLength="600"
             placeholder="Post something..."
           />
         </div>
