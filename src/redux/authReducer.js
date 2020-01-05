@@ -39,4 +39,15 @@ export const authMeThunk = () => dispatch => {
       : dispatch(setUserData(id, login, email, true));
   });
 };
+export const login = (email, password, rememberMe) => dispatch => {
+  authAPI.login(email, password, rememberMe).then(response => {
+    response.data.resultCode === 0 && dispatch(authMeThunk());
+  });
+};
+export const logout = () => dispatch => {
+  authAPI.logout().then(response => {
+    response.data.resultCode === 0 &&
+      dispatch(setUserData(null, null, null, false));
+  });
+};
 export default authReducer;

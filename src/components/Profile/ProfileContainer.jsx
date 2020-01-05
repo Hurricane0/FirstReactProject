@@ -9,6 +9,7 @@ import {
 } from "../../redux/profileReducer";
 import Profile from "./Profile";
 import { compose } from "redux";
+import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 class ProfileContainer extends React.Component {
   componentDidMount() {
     let userId = this.props.match.params.userId;
@@ -35,5 +36,6 @@ export default compose(
     updateUserStatus,
     addPostAC
   }),
-  withRouter
+  withRouter,
+  withAuthRedirect
 )(ProfileContainer);

@@ -6,7 +6,7 @@ function Header(props) {
   return (
     <div className={s.header}>
       {props.isAuth ? (
-        <LoginedUserInfo username={props.username} />
+        <LoginedUserInfo logout={props.logout} username={props.username} />
       ) : (
         <NavLink to="/login" className={s.auth}>
           Login
