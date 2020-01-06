@@ -56,18 +56,12 @@ export const setUserStatus = userStatus => ({
 /////////////////////////////////////////////////
 export const setCurrentProflieThunk = userId => {
   return dispatch => {
-    if (!userId) {
-      userId = 5500;
-    }
     profileAPI.getProfile(userId).then(data => {
       dispatch(setCurrentProfile(data));
     });
   };
 };
 export const getUserStatus = userId => dispatch => {
-  if (!userId) {
-    userId = 5500;
-  }
   profileAPI.getUserStatus(userId).then(response => {
     dispatch(setUserStatus(response.data || "Write your status..."));
   });
