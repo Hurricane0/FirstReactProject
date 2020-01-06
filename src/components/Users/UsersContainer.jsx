@@ -13,12 +13,12 @@ import {
 } from "../../redux/usersReducer";
 import Users from "./Users";
 import {
-  selectUsers,
   selectPageSize,
   selectTotalUsersCount,
   selectCurrentPage,
   selectInFollowingProcess,
-  selectIsFetching
+  selectIsFetching,
+  superSelectUsers
 } from "../../redux/selectors/users-selectors";
 class UsersContainer extends React.Component {
   componentDidMount() {
@@ -47,7 +47,7 @@ class UsersContainer extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    users: selectUsers(state),
+    users: superSelectUsers(state), //Reselect functionality
     totalUsersCount: selectTotalUsersCount(state),
     pageSize: selectPageSize(state),
     currentPage: selectCurrentPage(state),

@@ -1,6 +1,13 @@
-export const selectUsers = state => {
+import { createSelector } from "reselect";
+
+export const primitiveSelectUsers = state => {
   return state.usersPage.users;
 };
+//reselect example:
+export const superSelectUsers = createSelector(primitiveSelectUsers, users => {
+  //some difficult operations
+  return users;
+});
 export const selectTotalUsersCount = state => {
   return state.usersPage.totalUsersCount;
 };
