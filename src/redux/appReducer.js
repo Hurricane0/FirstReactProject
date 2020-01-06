@@ -23,9 +23,6 @@ export const initializingSuccess = () => ({
 });
 
 export const initialize = () => dispatch => {
-  dispatch(authMeThunk()).then(() => {
-    dispatch(initializingSuccess());
-  });
   let firstPromise = dispatch(authMeThunk());
   Promise.all([firstPromise]).then(() => {
     dispatch(initializingSuccess());

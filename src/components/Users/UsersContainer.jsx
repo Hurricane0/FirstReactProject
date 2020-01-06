@@ -1,18 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
+import { compose } from "redux";
 import {
   follow,
+  followThunk,
   getUsersThunk,
   setCurrentPageUsersThunk,
   toggleInFollowingProcess,
   toggleIsFetching,
   unfollow,
-  followThunk,
   unfollowThunk
 } from "../../redux/usersReducer";
 import Users from "./Users";
-import { withAuthRedirect } from "../../hoc/withAuthRedirect";
-import { compose } from "redux";
+import {
+  selectUsers,
+  selectPageSize,
+  selectTotalUsersCount,
+  selectCurrentPage,
+  selectInFollowingProcess,
+  selectIsFetching
+} from "../../redux/selectors/users-selectors";
 class UsersContainer extends React.Component {
   componentDidMount() {
     this.props.getUsersThunk(this.props.currentPage, this.props.pageSize);
@@ -40,12 +47,12 @@ class UsersContainer extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    users: state.usersPage.users,
-    totalUsersCount: state.usersPage.totalUsersCount,
-    pageSize: state.usersPage.pageSize,
-    currentPage: state.usersPage.currentPage,
-    isFetching: state.usersPage.isFetching,
-    inFollowingProcess: state.usersPage.inFollowingProcess
+    users: selectUsers(state),
+    totalUsersCount: selectTotalUsersCount(state),
+    pageSize: selectPageSize(state),
+    currentPage: selectCurrentPage(state),
+    isFetching: selectIsFetching(state),
+    inFollowingProcess: selectInFollowingProcess(state)
   };
 };
 export default compose(
@@ -58,6 +65,5 @@ export default compose(
     setCurrentPageUsersThunk,
     followThunk,
     unfollowThunk
-  }),
-  withAuthRedirect
+  })
 )(UsersContainer);
