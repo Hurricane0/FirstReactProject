@@ -54,6 +54,7 @@ let LoginForm = props => {
         />
         Remember Me
       </div>
+      {props.error && <span className={fs.common_error}>{props.error}</span>}
       <button>Login</button>
     </form>
   );

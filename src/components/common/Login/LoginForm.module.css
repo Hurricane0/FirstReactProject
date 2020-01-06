@@ -40,3 +40,6 @@
   box-shadow: none;
   transform: translateY(3px);
 }
+.common_error {
+  color: red;
+}
