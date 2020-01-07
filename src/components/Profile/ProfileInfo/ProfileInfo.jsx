@@ -1,7 +1,7 @@
 import React from "react";
-import s from "./ProfileInfo.module.css";
 import undefinedUserAvatar from "../../../assets/images/undefinedUserAvatar.png";
-import ProfileStatus from "./ProfileStatus/ProfileStatus";
+import s from "./ProfileInfo.module.css";
+import ProfileStatusHooks from "./ProfileStatus/ProfileStatusHooks";
 
 class ProfileInfo extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class ProfileInfo extends React.Component {
           </div>
           <div className={s.description}>
             <span className={s.username}>{this.props.profile.fullName}</span>
-            <ProfileStatus
+            <ProfileStatusHooks
               userStatus={this.props.userStatus}
               updateUserStatus={this.props.updateUserStatus}
             />

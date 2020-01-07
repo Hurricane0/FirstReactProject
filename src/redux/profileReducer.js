@@ -63,11 +63,14 @@ export const setCurrentProflieThunk = userId => {
 };
 export const getUserStatus = userId => dispatch => {
   profileAPI.getUserStatus(userId).then(response => {
+    console.log("getUserStatus: " + response.data);
     dispatch(setUserStatus(response.data || "Write your status..."));
   });
 };
 export const updateUserStatus = userStatus => dispatch => {
+  console.log("updateUserStatus: " + userStatus);
   profileAPI.updateUserStatus(userStatus).then(response => {
+    console.log("resultCode in UPDATE = " + response.data.resultCode);
     if (response.data.resultCode === 0) {
       dispatch(setUserStatus(userStatus || "Write your status..."));
     }
