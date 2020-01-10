@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "FirstReactProject/static/css/main.98927459.chunk.css",
-    "main.js": "FirstReactProject/static/js/main.1fd02780.chunk.js",
-    "main.js.map": "FirstReactProject/static/js/main.1fd02780.chunk.js.map",
-    "runtime-main.js": "FirstReactProject/static/js/runtime-main.cbfe8dc5.js",
-    "runtime-main.js.map": "FirstReactProject/static/js/runtime-main.cbfe8dc5.js.map",
-    "static/js/2.45051e37.chunk.js": "FirstReactProject/static/js/2.45051e37.chunk.js",
-    "static/js/2.45051e37.chunk.js.map": "FirstReactProject/static/js/2.45051e37.chunk.js.map",
-    "static/css/3.04dcca29.chunk.css": "FirstReactProject/static/css/3.04dcca29.chunk.css",
-    "static/js/3.5bc21a9d.chunk.js": "FirstReactProject/static/js/3.5bc21a9d.chunk.js",
-    "static/js/3.5bc21a9d.chunk.js.map": "FirstReactProject/static/js/3.5bc21a9d.chunk.js.map",
-    "index.html": "FirstReactProject/index.html",
-    "precache-manifest.fd572b91e7fcf7f81f789697970b9d68.js": "FirstReactProject/precache-manifest.fd572b91e7fcf7f81f789697970b9d68.js",
-    "service-worker.js": "FirstReactProject/service-worker.js",
-    "static/css/3.04dcca29.chunk.css.map": "FirstReactProject/static/css/3.04dcca29.chunk.css.map",
-    "static/css/main.98927459.chunk.css.map": "FirstReactProject/static/css/main.98927459.chunk.css.map",
-    "static/media/preloader.svg": "FirstReactProject/static/media/preloader.77535b43.svg"
+    "main.css": "/FirstReactProject/static/css/main.98927459.chunk.css",
+    "main.js": "/FirstReactProject/static/js/main.9ef5c770.chunk.js",
+    "main.js.map": "/FirstReactProject/static/js/main.9ef5c770.chunk.js.map",
+    "runtime-main.js": "/FirstReactProject/static/js/runtime-main.383ce90a.js",
+    "runtime-main.js.map": "/FirstReactProject/static/js/runtime-main.383ce90a.js.map",
+    "static/js/2.45051e37.chunk.js": "/FirstReactProject/static/js/2.45051e37.chunk.js",
+    "static/js/2.45051e37.chunk.js.map": "/FirstReactProject/static/js/2.45051e37.chunk.js.map",
+    "static/css/3.04dcca29.chunk.css": "/FirstReactProject/static/css/3.04dcca29.chunk.css",
+    "static/js/3.5bc21a9d.chunk.js": "/FirstReactProject/static/js/3.5bc21a9d.chunk.js",
+    "static/js/3.5bc21a9d.chunk.js.map": "/FirstReactProject/static/js/3.5bc21a9d.chunk.js.map",
+    "index.html": "/FirstReactProject/index.html",
+    "precache-manifest.55b68ab6ee2424d43957519d2944044a.js": "/FirstReactProject/precache-manifest.55b68ab6ee2424d43957519d2944044a.js",
+    "service-worker.js": "/FirstReactProject/service-worker.js",
+    "static/css/3.04dcca29.chunk.css.map": "/FirstReactProject/static/css/3.04dcca29.chunk.css.map",
+    "static/css/main.98927459.chunk.css.map": "/FirstReactProject/static/css/main.98927459.chunk.css.map",
+    "static/media/preloader.svg": "/FirstReactProject/static/media/preloader.77535b43.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cbfe8dc5.js",
+    "static/js/runtime-main.383ce90a.js",
     "static/js/2.45051e37.chunk.js",
     "static/css/main.98927459.chunk.css",
-    "static/js/main.1fd02780.chunk.js"
+    "static/js/main.9ef5c770.chunk.js"
   ]
 }
