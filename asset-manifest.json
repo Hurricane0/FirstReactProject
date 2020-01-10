@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "Hurricane0.github.io/FirstReactProject/static/css/main.98927459.chunk.css",
-    "main.js": "Hurricane0.github.io/FirstReactProject/static/js/main.f8b17942.chunk.js",
-    "main.js.map": "Hurricane0.github.io/FirstReactProject/static/js/main.f8b17942.chunk.js.map",
-    "runtime-main.js": "Hurricane0.github.io/FirstReactProject/static/js/runtime-main.c5e83428.js",
-    "runtime-main.js.map": "Hurricane0.github.io/FirstReactProject/static/js/runtime-main.c5e83428.js.map",
-    "static/js/2.45051e37.chunk.js": "Hurricane0.github.io/FirstReactProject/static/js/2.45051e37.chunk.js",
-    "static/js/2.45051e37.chunk.js.map": "Hurricane0.github.io/FirstReactProject/static/js/2.45051e37.chunk.js.map",
-    "static/css/3.04dcca29.chunk.css": "Hurricane0.github.io/FirstReactProject/static/css/3.04dcca29.chunk.css",
-    "static/js/3.5bc21a9d.chunk.js": "Hurricane0.github.io/FirstReactProject/static/js/3.5bc21a9d.chunk.js",
-    "static/js/3.5bc21a9d.chunk.js.map": "Hurricane0.github.io/FirstReactProject/static/js/3.5bc21a9d.chunk.js.map",
-    "index.html": "Hurricane0.github.io/FirstReactProject/index.html",
-    "precache-manifest.8fd0c7bdf9bbcb249a6dd4040a2a2b77.js": "Hurricane0.github.io/FirstReactProject/precache-manifest.8fd0c7bdf9bbcb249a6dd4040a2a2b77.js",
-    "service-worker.js": "Hurricane0.github.io/FirstReactProject/service-worker.js",
-    "static/css/3.04dcca29.chunk.css.map": "Hurricane0.github.io/FirstReactProject/static/css/3.04dcca29.chunk.css.map",
-    "static/css/main.98927459.chunk.css.map": "Hurricane0.github.io/FirstReactProject/static/css/main.98927459.chunk.css.map",
-    "static/media/preloader.svg": "Hurricane0.github.io/FirstReactProject/static/media/preloader.77535b43.svg"
+    "main.css": "/FirstReactProject/static/css/main.98927459.chunk.css",
+    "main.js": "/FirstReactProject/static/js/main.9ef5c770.chunk.js",
+    "main.js.map": "/FirstReactProject/static/js/main.9ef5c770.chunk.js.map",
+    "runtime-main.js": "/FirstReactProject/static/js/runtime-main.383ce90a.js",
+    "runtime-main.js.map": "/FirstReactProject/static/js/runtime-main.383ce90a.js.map",
+    "static/js/2.45051e37.chunk.js": "/FirstReactProject/static/js/2.45051e37.chunk.js",
+    "static/js/2.45051e37.chunk.js.map": "/FirstReactProject/static/js/2.45051e37.chunk.js.map",
+    "static/css/3.04dcca29.chunk.css": "/FirstReactProject/static/css/3.04dcca29.chunk.css",
+    "static/js/3.5bc21a9d.chunk.js": "/FirstReactProject/static/js/3.5bc21a9d.chunk.js",
+    "static/js/3.5bc21a9d.chunk.js.map": "/FirstReactProject/static/js/3.5bc21a9d.chunk.js.map",
+    "index.html": "/FirstReactProject/index.html",
+    "precache-manifest.55b68ab6ee2424d43957519d2944044a.js": "/FirstReactProject/precache-manifest.55b68ab6ee2424d43957519d2944044a.js",
+    "service-worker.js": "/FirstReactProject/service-worker.js",
+    "static/css/3.04dcca29.chunk.css.map": "/FirstReactProject/static/css/3.04dcca29.chunk.css.map",
+    "static/css/main.98927459.chunk.css.map": "/FirstReactProject/static/css/main.98927459.chunk.css.map",
+    "static/media/preloader.svg": "/FirstReactProject/static/media/preloader.77535b43.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5e83428.js",
+    "static/js/runtime-main.383ce90a.js",
     "static/js/2.45051e37.chunk.js",
     "static/css/main.98927459.chunk.css",
-    "static/js/main.f8b17942.chunk.js"
+    "static/js/main.9ef5c770.chunk.js"
   ]
 }
