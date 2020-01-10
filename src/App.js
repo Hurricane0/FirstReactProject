@@ -3,13 +3,16 @@ import "./App.css";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import { Route, withRouter } from "react-router-dom";
 import ProfileContainer from "./components/Profile/ProfileContainer";
-import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/common/Login/Login";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { initialize } from "./redux/appReducer";
 import Preloader from "./components/common/Prealoader/Prealoader";
+const UsersContainer = React.lazy(() =>
+  import("./components/Users/UsersContainer")
+);
+
 class App extends React.Component {
   componentDidMount() {
     this.props.initialize();
@@ -29,7 +32,9 @@ class App extends React.Component {
               render={() => <ProfileContainer />}
             />
             <Route path="/messages" render={() => <DialogsContainer />} />
-            <Route path="/users" render={() => <UsersContainer />} />
+            <React.Suspense fallback={<Preloader />}>
+              <Route path="/users" render={() => <UsersContainer />} />
+            </React.Suspense>
           </div>
         </div>
       </div>
