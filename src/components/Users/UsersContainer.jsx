@@ -20,6 +20,7 @@ import {
   selectIsFetching,
   superSelectUsers
 } from "../../redux/selectors/users-selectors";
+import Preloader from "../common/Prealoader/Prealoader";
 class UsersContainer extends React.Component {
   componentDidMount() {
     this.props.getUsersThunk(this.props.currentPage, this.props.pageSize);
@@ -28,21 +29,10 @@ class UsersContainer extends React.Component {
     this.props.setCurrentPageUsersThunk(newPage, this.props.pageSize);
   };
   render() {
-    let pagesCount = Math.ceil(
-      this.props.totalUsersCount / this.props.pageSize
-    );
-    let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-      pages.push(i);
+    if (!this.props.totalUsersCount || this.props.isFetching) {
+      return <Preloader />;
     }
-    return (
-      <Users
-        pages={pages}
-        pagesCount={pagesCount}
-        {...this.props}
-        onPageChanged={this.onPageChanged}
-      />
-    );
+    return <Users {...this.props} onPageChanged={this.onPageChanged} />;
   }
 }
 const mapStateToProps = state => {

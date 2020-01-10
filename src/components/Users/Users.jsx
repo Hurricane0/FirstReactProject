@@ -1,36 +1,38 @@
 import React from "react";
+import Paginator from "../common/Paginator/Paginator";
 import Preloader from "../common/Prealoader/Prealoader";
 import UserBlock from "./UserBlock/UserBlock";
-import s from "./Users.module.css";
 
-let Users = props => {
+let Users = ({
+  currentPage,
+  onPageChanged,
+  users,
+  inFollowingProcess,
+  followThunk,
+  unfollowThunk,
+  isFetching,
+  pageSize,
+  totalUsersCount
+}) => {
+  if (isFetching) {
+    return <Preloader />;
+  }
+
   return (
     <div>
-      {props.isFetching && <Preloader />}
-      <div className={s.pagesNumbersBlock}>
-        {props.pages.map(page => {
-          return (
-            <span
-              key={page}
-              className={
-                props.currentPage === page ? s.selectedPage : undefined
-              }
-              onClick={() => {
-                props.onPageChanged(page);
-              }}
-            >
-              {page}
-            </span>
-          );
-        })}
-      </div>
-      {props.users.map(user => (
+      <Paginator
+        pageSize={pageSize}
+        totalUsersCount={totalUsersCount}
+        currentPage={currentPage}
+        onPageChanged={onPageChanged}
+      />
+      {users.map(user => (
         <div key={user.id}>
           <UserBlock
-            inFollowingProcess={props.inFollowingProcess}
+            inFollowingProcess={inFollowingProcess}
             user={user}
-            followThunk={props.followThunk}
-            unfollowThunk={props.unfollowThunk}
+            followThunk={followThunk}
+            unfollowThunk={unfollowThunk}
           />
         </div>
       ))}

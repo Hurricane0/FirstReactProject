@@ -6,10 +6,11 @@ const SET_USERS = "SET_USERS";
 const SET_CURRENT_PAGE = "SET_CURREN_PAGE";
 const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
 const TOGGLE_IN_FOLLOWING_PROCESS = "TOGGLE_IN_FOLLOWING_PROCESS";
+const SET_TOTAL_USERS_COUNT = "dvortsov/usersPage/SET_TOTAL_USERS_COUNT";
 
 let initialState = {
   users: [],
-  totalUsersCount: 270,
+  totalUsersCount: null,
   pageSize: 30,
   currentPage: 1,
   isFetching: true,
@@ -61,6 +62,11 @@ const usersReducer = (state = initialState, action) => {
           ? [...state.inFollowingProcess, action.userId]
           : state.inFollowingProcess.filter(id => id !== action.userId)
       };
+    case SET_TOTAL_USERS_COUNT:
+      return {
+        ...state,
+        totalUsersCount: action.totalUsersCount
+      };
     default:
       return state;
   }
@@ -82,6 +88,10 @@ export const setCurrentPage = currentPage => ({
   type: SET_CURRENT_PAGE,
   currentPage
 });
+export const setTotalUsersCount = totalUsersCount => ({
+  type: SET_TOTAL_USERS_COUNT,
+  totalUsersCount
+});
 export const toggleIsFetching = isFetching => ({
   type: TOGGLE_IS_FETCHING,
   isFetching
@@ -92,22 +102,21 @@ export const toggleInFollowingProcess = (isFollowing, userId) => ({
   userId
 });
 export const getUsersThunk = (currentPage, pageSize) => {
-  return dispatch => {
+  return async dispatch => {
     dispatch(toggleIsFetching(true));
-    usersAPI.getUsers(currentPage, pageSize).then(data => {
-      dispatch(toggleIsFetching(false));
-      dispatch(setUsers(data.items));
-    });
+    const data = await usersAPI.getUsers(currentPage, pageSize);
+    dispatch(toggleIsFetching(false));
+    dispatch(setUsers(data.items));
+    dispatch(setTotalUsersCount(data.totalCount));
   };
 };
 export const setCurrentPageUsersThunk = (newPage, pageSize) => {
-  return dispatch => {
+  return async dispatch => {
     dispatch(setCurrentPage(newPage));
     dispatch(toggleIsFetching(true));
-    usersAPI.getUsers(newPage, pageSize).then(data => {
-      dispatch(toggleIsFetching(false));
-      dispatch(setUsers(data.items));
-    });
+    const data = await usersAPI.getUsers(newPage, pageSize);
+    dispatch(toggleIsFetching(false));
+    dispatch(setUsers(data.items));
   };
 };
 export const followThunk = userId => dispatch => {

@@ -1,7 +1,7 @@
 import { authAPI } from "../api/api";
 import { stopSubmit } from "redux-form";
 
-const SET_USER_DATA = "SET-USER-DATA";
+const SET_USER_DATA = "dvortsov/auth/SET-USER-DATA";
 
 let initialState = {
   userId: null,
@@ -32,26 +32,22 @@ export const setUserData = (userId, login, email, isAuth) => ({
   }
 });
 
-export const authMeThunk = () => dispatch => {
-  return authAPI.authMe().then(data => {
-    let { id, login, email } = data.data;
-    data.resultCode === 1
-      ? dispatch(setUserData(id, login, email, false))
-      : dispatch(setUserData(id, login, email, true));
-  });
+export const authMeThunk = () => async dispatch => {
+  const data = await authAPI.authMe();
+  let { id, login, email } = data.data;
+  data.resultCode === 1
+    ? dispatch(setUserData(id, login, email, false))
+    : dispatch(setUserData(id, login, email, true));
 };
-export const login = (email, password, rememberMe) => dispatch => {
-  authAPI.login(email, password, rememberMe).then(response => {
-    console.log(response.data.messages);
-    response.data.resultCode === 0
-      ? dispatch(authMeThunk())
-      : dispatch(stopSubmit("login", { _error: response.data.messages[0] }));
-  });
+export const login = (email, password, rememberMe) => async dispatch => {
+  const response = await authAPI.login(email, password, rememberMe);
+  response.data.resultCode === 0
+    ? dispatch(authMeThunk())
+    : dispatch(stopSubmit("login", { _error: response.data.messages[0] }));
 };
-export const logout = () => dispatch => {
-  authAPI.logout().then(response => {
-    response.data.resultCode === 0 &&
-      dispatch(setUserData(null, null, null, false));
-  });
+export const logout = () => async dispatch => {
+  const response = await authAPI.logout();
+  response.data.resultCode === 0 &&
+    dispatch(setUserData(null, null, null, false));
 };
 export default authReducer;

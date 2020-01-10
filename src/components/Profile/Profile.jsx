@@ -5,27 +5,27 @@ import TextAreaPost from "./TextAreaPost/TextAreaPost";
 import Preloader from "../common/Prealoader/Prealoader";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-function Profile(props) {
-  if (!props.profile) {
+function Profile({ profile, posts, addPostAC, userStatus, updateUserStatus }) {
+  if (!profile) {
     return <Preloader />;
   }
-  let newPost = props.posts.map(post => (
+  let newPost = posts.map(post => (
     <Post
       key={post.id}
-      userAvatar={props.profile.photos.small}
+      userAvatar={profile.photos.small}
       postText={post.postText}
       id={post.id}
     />
   ));
   let addPost = textareaData => {
-    props.addPostAC(textareaData.postText);
+    addPostAC(textareaData.postText);
   };
   return (
     <div className={s.wrapper}>
       <ProfileInfo
-        profile={props.profile}
-        userStatus={props.userStatus}
-        updateUserStatus={props.updateUserStatus}
+        profile={profile}
+        userStatus={userStatus}
+        updateUserStatus={updateUserStatus}
       />
       <div>
         <TextAreaPost onSubmit={addPost} />

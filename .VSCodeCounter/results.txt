@@ -1,0 +1,131 @@
+Date : 2020-01-08 23:00:13
+Directory : c:\Users\user\Programming\FirstReactProject
+Total : 71 files,  15693 codes, 225 comments, 219 blanks, all 16137 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          3 |     13,684 |          0 |          3 |     13,687 |
+| JavaScript React |         27 |        748 |         25 |         83 |        856 |
+| CSS              |         22 |        603 |         72 |         27 |        702 |
+| JavaScript       |         15 |        591 |        103 |         73 |        767 |
+| Markdown         |          1 |         37 |          0 |         32 |         69 |
+| HTML             |          1 |         23 |         25 |          1 |         49 |
+| XML              |          2 |          7 |          0 |          0 |          7 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                   |         71 |     15,693 |        225 |        219 |     16,137 |
+| public                                                                                                                              |          2 |         48 |         25 |          2 |         75 |
+| src                                                                                                                                 |         66 |      1,949 |        200 |        183 |      2,332 |
+| src\api                                                                                                                             |          1 |         49 |          0 |          5 |         54 |
+| src\assets                                                                                                                          |          1 |          6 |          0 |          0 |          6 |
+| src\assets\svg                                                                                                                      |          1 |          6 |          0 |          0 |          6 |
+| src\components                                                                                                                      |         47 |      1,319 |         97 |        108 |      1,524 |
+| src\components\Dialogs                                                                                                              |         17 |        292 |         97 |         41 |        430 |
+| src\components\Dialogs\Chat                                                                                                         |          5 |        142 |         90 |         15 |        247 |
+| src\components\Dialogs\Chat\ChatTextArea                                                                                            |          2 |          0 |         89 |          5 |         94 |
+| src\components\Dialogs\DialogsList                                                                                                  |          9 |        102 |          7 |         20 |        129 |
+| src\components\Dialogs\DialogsList\DialogBlock                                                                                      |          6 |         84 |          7 |         12 |        103 |
+| src\components\Dialogs\DialogsList\DialogBlock\UserAvatar                                                                           |          2 |         23 |          1 |          4 |         28 |
+| src\components\Dialogs\DialogsList\DialogBlock\UserDialogInfo                                                                       |          2 |         34 |          3 |          4 |         41 |
+| src\components\Header                                                                                                               |          5 |        155 |          0 |         11 |        166 |
+| src\components\Header\LoginedUserInfo                                                                                               |          2 |         35 |          0 |          4 |         39 |
+| src\components\Profile                                                                                                              |         13 |        412 |          0 |         35 |        447 |
+| src\components\Profile\Post                                                                                                         |          2 |         44 |          0 |          5 |         49 |
+| src\components\Profile\ProfileInfo                                                                                                  |          5 |        169 |          0 |         13 |        182 |
+| src\components\Profile\ProfileInfo\ProfileStatus                                                                                    |          3 |         98 |          0 |          9 |        107 |
+| src\components\Profile\TextAreaPost                                                                                                 |          3 |        116 |          0 |         11 |        127 |
+| src\components\Users                                                                                                                |          5 |        275 |          0 |          8 |        283 |
+| src\components\Users\UserBlock                                                                                                      |          2 |        144 |          0 |          3 |        147 |
+| src\components\common                                                                                                               |          7 |        185 |          0 |         13 |        198 |
+| src\components\common\FormsControl                                                                                                  |          2 |         31 |          0 |          3 |         34 |
+| src\components\common\Login                                                                                                         |          3 |        130 |          0 |          6 |        136 |
+| src\components\common\Prealoader                                                                                                    |          2 |         24 |          0 |          4 |         28 |
+| src\hoc                                                                                                                             |          1 |         16 |          2 |          1 |         19 |
+| src\redux                                                                                                                           |          8 |        354 |         67 |         45 |        466 |
+| src\redux\selectors                                                                                                                 |          1 |         22 |          2 |          2 |         26 |
+| src\utilities                                                                                                                       |          1 |         10 |          0 |          1 |         11 |
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                                                            | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\user\Programming\FirstReactProject\README.md                                                                               | Markdown         |         37 |          0 |         32 |         69 |
+| c:\Users\user\Programming\FirstReactProject\package-lock.json                                                                       | JSON             |     13,621 |          0 |          1 |     13,622 |
+| c:\Users\user\Programming\FirstReactProject\package.json                                                                            | JSON             |         38 |          0 |          1 |         39 |
+| c:\Users\user\Programming\FirstReactProject\public\index.html                                                                       | HTML             |         23 |         25 |          1 |         49 |
+| c:\Users\user\Programming\FirstReactProject\public\manifest.json                                                                    | JSON             |         25 |          0 |          1 |         26 |
+| c:\Users\user\Programming\FirstReactProject\src\App.css                                                                             | CSS              |         23 |          0 |          1 |         24 |
+| c:\Users\user\Programming\FirstReactProject\src\App.js                                                                              | JavaScript       |         45 |          0 |          3 |         48 |
+| c:\Users\user\Programming\FirstReactProject\src\App.test.js                                                                         | JavaScript       |          8 |          0 |          2 |         10 |
+| c:\Users\user\Programming\FirstReactProject\src\api\api.js                                                                          | JavaScript       |         49 |          0 |          5 |         54 |
+| c:\Users\user\Programming\FirstReactProject\src\assets\svg\preloader.svg                                                            | XML              |          6 |          0 |          0 |          6 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\Chat\Chat.jsx                                                    | JavaScript React |         40 |          0 |          4 |         44 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\Chat\Chat.module.css                                             | CSS              |         90 |          0 |          2 |         92 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\Chat\ChatContainer.jsx                                           | JavaScript React |         12 |          1 |          4 |         17 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\Chat\ChatTextArea\ChatTextArea.jsx                               | JavaScript React |          0 |         22 |          4 |         26 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\Chat\ChatTextArea\ChatTextArea.module.css                        | CSS              |          0 |         67 |          1 |         68 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\Dialogs.jsx                                                      | JavaScript React |         19 |          0 |          3 |         22 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\Dialogs.module.css                                               | CSS              |         19 |          0 |          1 |         20 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsContainer.jsx                                             | JavaScript React |         10 |          0 |          2 |         12 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogBlock\DialogBlock.jsx                          | JavaScript React |         16 |          0 |          3 |         19 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogBlock\DialogBlock.module.css                   | CSS              |         11 |          3 |          1 |         15 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogBlock\UserAvatar\UserAvatar.jsx                | JavaScript React |         14 |          0 |          3 |         17 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogBlock\UserAvatar\UserAvatar.module.css         | CSS              |          9 |          1 |          1 |         11 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogBlock\UserDialogInfo\UserDialogInfo.jsx        | JavaScript React |         14 |          2 |          3 |         19 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogBlock\UserDialogInfo\UserDialogInfo.module.css | CSS              |         20 |          1 |          1 |         22 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogsList.jsx                                      | JavaScript React |          9 |          0 |          3 |         12 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogsList.module.css                               | CSS              |          0 |          0 |          1 |          1 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Dialogs\DialogsList\DialogsListContainer.jsx                             | JavaScript React |          9 |          0 |          4 |         13 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Header\Header.jsx                                                        | JavaScript React |         34 |          0 |          2 |         36 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Header\Header.module.css                                                 | CSS              |         67 |          0 |          2 |         69 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Header\HeaderContainer.jsx                                               | JavaScript React |         19 |          0 |          3 |         22 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Header\LoginedUserInfo\LoginedUserInfo.jsx                               | JavaScript React |         16 |          0 |          3 |         19 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Header\LoginedUserInfo\LoginedUserInfo.module.css                        | CSS              |         19 |          0 |          1 |         20 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\Post\Post.jsx                                                    | JavaScript React |         20 |          0 |          3 |         23 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\Post\Post.module.css                                             | CSS              |         24 |          0 |          2 |         26 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\Profile.jsx                                                      | JavaScript React |         36 |          0 |          3 |         39 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\Profile.module.css                                               | CSS              |          4 |          0 |          1 |          5 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\ProfileContainer.jsx                                             | JavaScript React |         43 |          0 |          2 |         45 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\ProfileInfo\ProfileInfo.jsx                                      | JavaScript React |         27 |          0 |          3 |         30 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\ProfileInfo\ProfileInfo.module.css                               | CSS              |         44 |          0 |          1 |         45 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\ProfileInfo\ProfileStatus\ProfileStatus.jsx                      | JavaScript React |         53 |          0 |          3 |         56 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\ProfileInfo\ProfileStatus\ProfileStatus.module.css               | CSS              |          7 |          0 |          1 |          8 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\ProfileInfo\ProfileStatus\ProfileStatusHooks.jsx                 | JavaScript React |         38 |          0 |          5 |         43 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\TextAreaPost\TextAreaPost.jsx                                    | JavaScript React |         29 |          0 |          4 |         33 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\TextAreaPost\TextAreaPost.module.css                             | CSS              |         74 |          0 |          3 |         77 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Profile\TextAreaPost\TextAreaPostContainer.jsx                           | JavaScript React |         13 |          0 |          4 |         17 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Users\UserBlock\UserBlock.jsx                                            | JavaScript React |         71 |          0 |          2 |         73 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Users\UserBlock\UserBlock.module.css                                     | CSS              |         73 |          0 |          1 |         74 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Users\Users.jsx                                                          | JavaScript React |         39 |          0 |          3 |         42 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Users\Users.module.css                                                   | CSS              |         23 |          0 |          1 |         24 |
+| c:\Users\user\Programming\FirstReactProject\src\components\Users\UsersContainer.jsx                                                 | JavaScript React |         69 |          0 |          1 |         70 |
+| c:\Users\user\Programming\FirstReactProject\src\components\common\FormsControl\FormsControl.jsx                                     | JavaScript React |         20 |          0 |          2 |         22 |
+| c:\Users\user\Programming\FirstReactProject\src\components\common\FormsControl\FormsControl.module.css                              | CSS              |         11 |          0 |          1 |         12 |
+| c:\Users\user\Programming\FirstReactProject\src\components\common\Login\Login.jsx                                                   | JavaScript React |         67 |          0 |          4 |         71 |
+| c:\Users\user\Programming\FirstReactProject\src\components\common\Login\Login.module.css                                            | CSS              |         18 |          0 |          1 |         19 |
+| c:\Users\user\Programming\FirstReactProject\src\components\common\Login\LoginForm.module.css                                        | CSS              |         45 |          0 |          1 |         46 |
+| c:\Users\user\Programming\FirstReactProject\src\components\common\Prealoader\Prealoader.jsx                                         | JavaScript React |         11 |          0 |          3 |         14 |
+| c:\Users\user\Programming\FirstReactProject\src\components\common\Prealoader\Preloader.module.css                                   | CSS              |         13 |          0 |          1 |         14 |
+| c:\Users\user\Programming\FirstReactProject\src\hoc\withAuthRedirect.js                                                             | JavaScript       |         16 |          2 |          1 |         19 |
+| c:\Users\user\Programming\FirstReactProject\src\index.css                                                                           | CSS              |          9 |          0 |          1 |         10 |
+| c:\Users\user\Programming\FirstReactProject\src\index.js                                                                            | JavaScript       |         17 |          3 |          3 |         23 |
+| c:\Users\user\Programming\FirstReactProject\src\logo.svg                                                                            | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\appReducer.js                                                                 | JavaScript       |         26 |          0 |          7 |         33 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\authReducer.js                                                                | JavaScript       |         48 |          0 |          6 |         54 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\dialogsReducer.js                                                             | JavaScript       |         34 |          2 |          4 |         40 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\profileReducer.js                                                             | JavaScript       |         73 |          2 |          6 |         81 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\redux-store.js                                                                | JavaScript       |         29 |          2 |          7 |         38 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\selectors\users-selectors.js                                                  | JavaScript       |         22 |          2 |          2 |         26 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\store.js                                                                      | JavaScript       |          0 |         59 |          6 |         65 |
+| c:\Users\user\Programming\FirstReactProject\src\redux\usersReducer.js                                                               | JavaScript       |        122 |          0 |          7 |        129 |
+| c:\Users\user\Programming\FirstReactProject\src\serviceWorker.js                                                                    | JavaScript       |         92 |         31 |         13 |        136 |
+| c:\Users\user\Programming\FirstReactProject\src\utilities\validators.js                                                             | JavaScript       |         10 |          0 |          1 |         11 |
+| Total                                                                                                                               |                  |     15,693 |        225 |        219 |     16,137 |
++-------------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
